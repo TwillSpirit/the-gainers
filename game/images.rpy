@@ -1,50 +1,43 @@
-# Dan
-
-image Dan:
-    "dan normal.png"
+layeredimage Tamcin:
     fit "scale-down"
 
-image Dan Blink:
-    "dan blink.png"
+    group base:
+        attribute normal default:
+            "tamcin_base"
+        attribute arm_up:
+            "tamcin_raise_arm"
+
+    group eyes:
+        attribute idle default:
+            "tamcin_expression_idle"
+        attribute blink:
+            "tamcin_expression_blink"
+        attribute happy:
+            "tamcin_expression_happy"
+
+    group mouth:
+        attribute shut default:
+            "tamcin_mouth_close"
+        attribute talk:
+            "tamcin_mouth_open"
+
+layeredimage Dan:
     fit "scale-down"
 
-image Dan Happy:
-    "dan happy.png"
-    fit "scale-down"
+    group base:
+        attribute normal default:
+            "dan_base"
 
-image Dan Talk:
-    "dan talk.png"
-    fit "scale-down"
+    group eyes:
+        attribute idle default:
+            "dan_eyes_open"
+        attribute blink:
+            "dan_eyes_close"
+        attribute happy:
+            "dan_eyes_happy"
 
-image Dan Blink Talk:
-    "dan blink talk.png"
-    fit "scale-down"
-
-image Dan Happy Talk:
-    "dan happy talk.png"
-    fit "scale-down"
-
-# Tamcin
-image Tamcin:
-    "tamcin normal.png"
-    fit "scale-down"
-
-image Tamcin Blink:
-    "tamcin blink.png"
-    fit "scale-down"
-
-image Tamcin Happy:
-    "tamcin happy.png"
-    fit "scale-down"
-
-image Tamcin Talk:
-    "tamcin talk.png"
-    fit "scale-down"
-
-image Tamcin Blink Talk:
-    "tamcin blink talk.png"
-    fit "scale-down"
-
-image Tamcin Happy Talk:
-    "tamcin happy talk.png"
-    fit "scale-down"
+    group mouth:
+        attribute shut default:
+            "dan_mouth_close"
+        attribute talk:
+            "dan_mouth_open"
