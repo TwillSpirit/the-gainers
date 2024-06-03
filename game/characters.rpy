@@ -7,4 +7,4 @@ init python:
             
 define dan = Actor(Character(name="Dan", image="Dan", color="#a58338"), "Dan")
 define tamcin = Actor(Character(name="Tamcin", image="Tamcin", color="#282835"), "Tamcin")
-define twill = Actor(Character(name="Twill", image="Twill"), "Twill")
+define twill = Actor(Character(name="Twill", image="Twill", color="#282835"), "Twill")

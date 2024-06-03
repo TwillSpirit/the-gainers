@@ -41,3 +41,25 @@ layeredimage Dan:
             "dan_mouth_close"
         attribute talk:
             "dan_mouth_open"
+
+
+layeredimage Twill:
+    fit "scale-down"
+
+    group base:
+        attribute normal default:
+            "twill_base"
+
+    group eyes:
+        attribute idle default:
+            "twill_eyes_open"
+        attribute blink:
+            "twill_eyes_close"
+        attribute happy:
+            "twill_eyes_happy"
+
+    group mouth:
+        attribute shut default:
+            "twill_mouth_close"
+        attribute talk:
+            "twill_mouth_open"
