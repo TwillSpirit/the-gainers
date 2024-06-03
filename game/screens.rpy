@@ -135,23 +135,23 @@ style window:
     xalign 0.5
     xfill True
     yalign gui.textbox_yalign
-    ysize gui.textbox_height
+    ysize 275
 
-    background Image("gui/textbox.png", xalign=0.5, yalign=1.0)
+    background Image("gui/Dialouge Box.png", xalign=0.5, yalign=1.0, yoffset=-50)
 
 style namebox:
-    xpos gui.name_xpos
-    xanchor gui.name_xalign
-    xsize gui.namebox_width
-    ypos gui.name_ypos
-    ysize gui.namebox_height
-
-    background Frame("gui/namebox.png", gui.namebox_borders, tile=gui.namebox_tile, xalign=gui.name_xalign)
-    padding gui.namebox_borders.padding
+    xpos 305
+    xanchor 0.0
+    xsize 239
+    ypos -120
+    xfill True
+    ysize 64
+    # background Frame("gui/namebox.png", gui.namebox_borders, tile=gui.namebox_tile, xalign=gui.name_xalign)
+    # padding gui.namebox_borders.padding
 
 style say_label:
     properties gui.text_properties("name", accent=True)
-    xalign gui.name_xalign
+    xalign 0.5
     yalign 0.5
 
 style say_dialogue:
@@ -159,7 +159,7 @@ style say_dialogue:
 
     xpos gui.dialogue_xpos
     xsize gui.dialogue_width
-    ypos gui.dialogue_ypos
+    ypos -30
 
     adjust_spacing False
 
@@ -289,12 +289,10 @@ style quick_button_text:
 screen navigation():
 
     vbox:
-        style_prefix "navigation"
+        style_prefix "custom_nav"
 
-        xpos 120
+        xpos 25
         yalign 0.5
-
-        spacing gui.navigation_spacing
 
         if main_menu:
 
@@ -331,9 +329,24 @@ screen navigation():
             ## Web.
             textbutton _("Quit") action Quit(confirm=not main_menu)
 
+        # textbutton _("Return"):
+        #     action Return()
 
-style navigation_button is gui_button
-style navigation_button_text is gui_button_text
+style custom_nav_button is gui_button
+style custom_nav_button_text is gui_button_text
+
+style custom_nav_button:
+    xpadding 10
+    ypadding 14
+    xminimum 350
+    
+style custom_nav_button_text:
+    font "fonts/HackNerdFontPropo-Bold.ttf"
+    color "#fff"
+    outlines [(absolute(4), color.blue.normal, absolute(0), absolute(0))]
+    hover_outlines [(absolute(4), color.blue.dark, absolute(0), absolute(0))]
+    selected_outlines [(absolute(4), color.blue.darkest, absolute(0), absolute(0))]
+    xalign 0.5
 
 style navigation_button:
     size_group "navigation"
@@ -388,7 +401,7 @@ style main_menu_frame:
     xsize 420
     yfill True
 
-    background "gui/overlay/main_menu.png"
+    # background "gui/overlay/main_menu.png"
 
 style main_menu_vbox:
     xalign 1.0
@@ -398,10 +411,13 @@ style main_menu_vbox:
     yoffset -30
 
 style main_menu_text:
-    properties gui.text_properties("main_menu", accent=True)
+    size 12
+    # properties gui.text_properties("main_menu", accent=True)
 
 style main_menu_title:
-    properties gui.text_properties("title")
+    # properties gui.text_properties("title")
+    size 12
+    color color.red.normal
 
 style main_menu_version:
     properties gui.text_properties("version")
@@ -433,6 +449,7 @@ screen game_menu(title, scroll=None, yinitial=0.0, spacing=0):
             ## Reserve space for the navigation section.
             frame:
                 style "game_menu_navigation_frame"
+                # style None
 
             frame:
                 style "game_menu_content_frame"
@@ -497,8 +514,8 @@ style game_menu_scrollbar is gui_vscrollbar
 style game_menu_label is gui_label
 style game_menu_label_text is gui_label_text
 
-style return_button is navigation_button
-style return_button_text is navigation_button_text
+style return_button is custom_nav_button
+style return_button_text is custom_nav_button_text
 
 style game_menu_outer_frame:
     bottom_padding 45
@@ -530,14 +547,14 @@ style game_menu_label:
 
 style game_menu_label_text:
     size gui.title_text_size
-    # color gui.accent_color
-    color '#ff0450'
+    color color.blue.darkest
     yalign 0.5
+    xpos 410
 
 style return_button:
-    xpos gui.navigation_xpos
+    xpos 25
     yalign 1.0
-    yoffset -45
+    yoffset -100
 
 
 ## About screen ################################################################
