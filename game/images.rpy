@@ -48,6 +48,28 @@ layeredimage Dan:
         attribute mouth_open:
             "dan_mouth_open"
 
+layeredimage Gerald:
+    fit "scale-down"
+
+    group base:
+        attribute normal default:
+            "gerald_base"
+        attribute naked:
+            "gerald_naked"
+
+    group eyes:
+        attribute eyes_open default:
+            "gerald_eyes_open"
+        attribute eyes_closed:
+            "gerald_eyes_closed"
+        attribute eyes_happy:
+            "gerald_eyes_happy"
+
+    group mouth:
+        attribute mouth_smile default:
+            "gerald_mouth_smile"
+        attribute mouth_open:
+            "gerald_mouth_open"
 
 layeredimage Twill:
     fit "scale-down"
@@ -69,3 +91,25 @@ layeredimage Twill:
             "twill_mouth_close"
         attribute talk:
             "twill_mouth_open"
+
+image Phone:
+    xalign 0.5
+    yalign 0.5
+    xanchor 0.5
+    yanchor 0.5
+    "item handphone.png"
+
+image Ringing:
+    xalign 0.5
+    yalign 0.5
+    xanchor 0.5
+    yanchor 0.5
+    "item handphone_ring_1"
+    pause 0.2
+    "item handphone_ring_2"
+    pause 0.2
+    "item handphone_ring_3"
+    pause 0.2
+    "item handphone_ring_4"
+    pause 0.2
+    repeat
