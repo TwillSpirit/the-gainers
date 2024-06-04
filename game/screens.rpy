@@ -35,7 +35,7 @@ style button_text is gui_text:
 
 style label_text is gui_text:
     properties gui.text_properties("label", accent=True)
-    font "fonts/HackNerdFontPropo-BoldItalic.ttf"
+    font "fonts/NovaFlat-BoldOblique.ttf"
 
 style prompt_text is gui_text:
     properties gui.text_properties("prompt")
@@ -316,7 +316,8 @@ screen navigation():
 
             textbutton _("Main Menu") action MainMenu()
 
-        textbutton _("About") action ShowMenu("about")
+        if main_menu:
+            textbutton _("About") action ShowMenu("about")
 
         if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
 
@@ -341,11 +342,12 @@ style custom_nav_button:
     xminimum 350
     
 style custom_nav_button_text:
-    font "fonts/HackNerdFontPropo-Bold.ttf"
+    font "fonts/NovaFlat-Bold.ttf"
     color "#fff"
     outlines [(absolute(4), color.blue.normal, absolute(0), absolute(0))]
     hover_outlines [(absolute(4), color.blue.dark, absolute(0), absolute(0))]
     selected_outlines [(absolute(4), color.blue.darkest, absolute(0), absolute(0))]
+    size 48
     xalign 0.5
 
 style navigation_button:
@@ -731,12 +733,14 @@ style page_button:
 
 style page_button_text:
     properties gui.text_properties("page_button")
+    font "fonts/NovaFlat-Book.ttf"
 
 style slot_button:
     properties gui.button_properties("slot_button")
 
 style slot_button_text:
     properties gui.text_properties("slot_button")
+    font "fonts/NovaFlat-Book.ttf"
 
 
 ## Preferences screen ##########################################################
@@ -859,6 +863,7 @@ style pref_label:
 
 style pref_label_text:
     yalign 1.0
+    font "fonts/NovaFlat-Bold.ttf"
 
 style pref_vbox:
     xsize 338
@@ -872,6 +877,7 @@ style radio_button:
 
 style radio_button_text:
     properties gui.text_properties("radio_button")
+    font "fonts/NovaFlatSlim-Book.ttf"
 
 style check_vbox:
     spacing gui.pref_button_spacing
@@ -882,6 +888,7 @@ style check_button:
 
 style check_button_text:
     properties gui.text_properties("check_button")
+    font "fonts/NovaFlatSlim-Book.ttf"
 
 style slider_slider:
     xsize 525
@@ -980,6 +987,7 @@ style history_text:
     min_width gui.history_text_width
     textalign gui.history_text_xalign
     layout ("subtitle" if gui.history_text_xalign else "tex")
+    font "fonts/NovaFlat-Book.ttf"
 
 style history_label:
     xfill True

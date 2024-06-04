@@ -1,3 +1,5 @@
+define color.white = "#ffffff"
+
 define color.red.normal = Color("#DE2121")
 define color.red.dark = Color("#B11B1B")
 define color.red.darkest = Color("#851414")

@@ -27,19 +27,25 @@ layeredimage Dan:
     group base:
         attribute normal default:
             "dan_base"
+        attribute naked:
+            "dan_naked"
 
     group eyes:
-        attribute idle default:
+        attribute eyes_open default:
             "dan_eyes_open"
-        attribute blink:
+        attribute eyes_mid_open:
+            "dan_eyes_mid_open"
+        attribute eyes_closed:
             "dan_eyes_close"
-        attribute happy:
+        attribute eyes_happy:
             "dan_eyes_happy"
 
     group mouth:
-        attribute shut default:
+        attribute mouth_smile default:
             "dan_mouth_close"
-        attribute talk:
+        attribute mouth_flat:
+            "dan_mouth_poker"
+        attribute mouth_open:
             "dan_mouth_open"
 
 

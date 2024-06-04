@@ -1,75 +1,94 @@
 label story_begin:
-    scene bg city
-    with fade
+    scene bg alarm
+    $ quick_menu = True
+    with Fade(1.0, 1.0, 1.0, color=color.white)
+
+    """RING, RING, RING! IT'S 7 IN THE MORNING
     
-    """In a city name \"Duri\".
+    RAISE AND SHINE TO THE WORLD!
     
-    Arrived a distinguish gentlemen, going to his friend's house."""
+    {i}*click{/i}"""
 
-    show Dan at center
-    with easeinleft
+    scene bg dan_room
+    with dissolve
 
-    dan.character normal happy talk "*phew* I finally arrived!~"
-    dan.character normal idle talk "It is indeed a beautiful city. "
-    dan.character normal idle shut "{i}Man...{/i} "
-    extend "{i}He's indeed lucky to live in this city.{/i}"
+    dan.character naked eyes_mid_open mouth_smile "{i}yawn...{/i}"
+    dan.character "Man... "
+    extend "it was a really nice sleep.~"
 
-    dan.character normal idle talk "I kinda want to do a little walk in this place, "
-    extend "but I need to go to my friend's house."
+    show Dan with dissolve
+    dan.character "..."
+    dan.character mouth_flat "..."
+    dan.character "Right... "
+    extend "I still have a lot projects need to be done."
+    dan.character "I wish Gerald's here and help me with this project."
+    dan.character "But he just disappeared 4 months after we graduated."
 
-    dan.character normal idle shut "{i}What should I do?{/i}"
+    hide Dan
+    with dissolve
+    scene bg graduated_pic
+    with dissolve
 
-    menu:
-        "Do a little walk":
-            call dan_goes_walk
-            return
-        "Go visit my friend's house":
-            dan.character @ normal idle talk "Yeah, I shouldn't make him wait now."
+    dan.character "Me and Gerald are best friend."
+    dan.character "We went at the same university and the same classes"
+    dan.character "We both majored at IT."
+    dan.character "After the graduation, Gerald got called that he have to went overseas with his parent."
+    dan.character "I tried to call him if he's alright because I quite miss him, "
+    extend "but no avail."
+    dan.character "He always set his phone busy."
+    dan.character "I just wish that he'll come visit again."
 
-            hide Dan
-            with easeoutright
+    scene bg dan_room
+    show Dan naked eyes_mid_open mouth_flat
+    with dissolve
 
-            jump dan_goes_friends_house
-            return
-
-    return
-
-label dan_goes_walk:
-    dan.character talk "A little walk around would not be a problem."
+    dan.character "Enough ranting Dan. "
+    extend "The day is still young."
+    dan.character mouth_smile "I'm gonna take a good warm shower now"
 
     hide Dan
     with easeoutright
 
-    "and Dan decided to do a little walk for a bit."
+    scene bg shower
+    with dissolve
+    pause (3.0)
 
-    scene black
-    with fade
-    pause(1.0)
+    dan.character "Gonna turn on this radio as well ~"
 
-    "30 minutes of walking around."
+    pause (2.0)
 
-    scene bg city
-    with fade
+    radio.character "Tired of being called skinny? "
+    extend "Say no more! "
+    radio.character "With this ring, "
+    extend "You can grow your muscles! "
+    extend "It will help you to become stronger as well! "
+    extend "And, you will not be called skinny anymore!~"
 
-    show Dan at center:
+    dan.character "Ring... "
+    extend "that grow your muscles?"
+    dan.character "..."
+    dan.character "What a stupid advertisement."
+    dan.character "No idea if it's real or not, but that just too good to be true."
+
+    scene bg dan_room
+    with dissolve
+
+    show Dan:
         xzoom -1.0
+        xanchor -0.5
     with easeinright
 
-    dan.character normal idle talk "Wow~"
-    dan.character normal happy talk "So many good places in here.~"
-    dan.character "Alright, "
-    extend "It's time to go to his house now."
-    dan.character normal idle @talk "He's probably waiting for me right now."
+    dan.character normal eyes_happy mouth_open "What a good shower.~"
+    dan.character mouth_smile "It helps to lift up my mood.~"
+    dan.character eyes_open mouth_open "Alright! "
+    extend "It's time to do the project.~"
+    dan.character mouth_smile "I think I'll working on it in the cafe as well. "
+    extend "Gotta love the coffee they make.~"
 
     hide Dan
     with easeoutleft
 
-    jump dan_goes_friends_house
-    return
-
-
-label dan_goes_friends_house:
-    scene bg city
+    scene black
     with fade
-    """Dan finally arrived at his friend's house"""
+
     return
