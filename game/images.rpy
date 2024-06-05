@@ -22,7 +22,9 @@ layeredimage Tamcin:
             "tamcin_mouth_open"
 
 layeredimage Dan:
+    subpixel True
     fit "scale-down"
+    xanchor 0.5
 
     group base:
         attribute normal default:
@@ -39,6 +41,12 @@ layeredimage Dan:
             "dan_eyes_close"
         attribute eyes_happy:
             "dan_eyes_happy"
+        attribute eyes_surprised:
+            "dan_eyes_surprised"
+        attribute eyes_confused:
+            "dan_eyes_confused"
+        attribute eyes_confused_surprised:
+            "dan_eyes_confused_surprised"
 
     group mouth:
         attribute mouth_smile default:
@@ -47,9 +55,54 @@ layeredimage Dan:
             "dan_mouth_poker"
         attribute mouth_open:
             "dan_mouth_open"
+        attribute mouth_open_2:
+            "dan_mouth_open_2"
+
+
+layeredimage side Dan:
+    fit "scale-down"
+    size (1024,1024)
+    xanchor 0.5
+    yanchor 0.5
+    yoffset 600
+    xoffset -250
+
+    group base:
+        attribute normal default:
+            "dan_base"
+        attribute naked:
+            "dan_naked"
+
+    group eyes:
+        attribute eyes_open default:
+            "dan_eyes_open"
+        attribute eyes_mid_open:
+            "dan_eyes_mid_open"
+        attribute eyes_closed:
+            "dan_eyes_close"
+        attribute eyes_happy:
+            "dan_eyes_happy"
+        attribute eyes_surprised:
+            "dan_eyes_surprised"
+        attribute eyes_confused:
+            "dan_eyes_confused"
+        attribute eyes_confused_surprised:
+            "dan_eyes_confused_surprised"
+
+    group mouth:
+        attribute mouth_smile default:
+            "dan_mouth_close"
+        attribute mouth_flat:
+            "dan_mouth_poker"
+        attribute mouth_open:
+            "dan_mouth_open"
+        attribute mouth_open_2:
+            "dan_mouth_open_2"
 
 layeredimage Gerald:
+    subpixel True
     fit "scale-down"
+    xanchor 0.5
 
     group base:
         attribute normal default:

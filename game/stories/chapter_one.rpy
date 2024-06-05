@@ -1,3 +1,5 @@
+default coffee_selection = ""
+
 label story_begin:
     scene bg alarm
     $ quick_menu = True
@@ -21,7 +23,7 @@ label story_begin:
     dan.character mouth_flat "..."
     dan.character "Right... "
     extend "I still have a lot projects need to be done."
-    dan.character "I wish Gerald's here and help me with this project."
+    dan.character "I wish Gerald's here and help me accompany with this project."
     dan.character "But he just disappeared 4 months after we graduated."
 
     hide Dan
@@ -80,8 +82,8 @@ label story_begin:
     hide screen simple_splash_screen
     with Dissolve(0.5)
     show Dan:
+        center
         xzoom -1.0
-        xanchor -0.5
     with easeinright
 
     dan.character normal eyes_happy mouth_open "What a good shower.~"
@@ -108,6 +110,18 @@ label story_begin:
     dan.character mouth_open "Finally arrived."
     dan.character eyes_happy "Time to order and do the work!~"
 
+    dan.character eyes_open mouth_smile "{i}What coffee should I order?{/i}"
+
+    menu:
+        "Cappuccino":
+            $ coffee_selection = "Cappucino"
+        "Latte":
+            $ coffee_selection = "latte"
+        "Espresso":
+            $ coffee_selection = "Espresso"
+
+    dan.character @ mouth_open "Let's order [coffee_selection] this time.~"
+
     hide Dan
     with easeoutright
 
@@ -119,7 +133,10 @@ label story_begin:
     hide screen simple_splash_screen
     with Dissolve(0.5)
 
-    dan.character "Alright! "
+    $ should_show_side_image = True
+    dan.character eyes_happy mouth_open "Alright! "
+    dan.character eyes_open mouth_open "My Laptop's ready, "
+    extend "My coffee's ready! "
     extend "Let's do this!"
 
     window hide
@@ -136,20 +153,42 @@ label story_begin:
     with dissolve
 
     pause 1.0
-    dan.character "Hmmm....?"
+    $ should_show_side_image = True
+    dan.character eyes_confused mouth_flat "Hmmm....?"
     dan.character "Unknown number?"
     dan.character "I feel reluctant to answer this number..."
     dan.character "{i}What should I do{/i}"
 
     menu:
         "Answer the phone":
+            jump answer_call
             pass
         "Don't answer the phone":
             jump reject_call
             pass
             #block of code to run
         
+    return
 
+label answer_call:
+    hide Ringing
+    with dissolve
+    $ should_show_side_image = True
+    dan.character eyes_confused mouth_flat "I'll try to answer it."
+    dan.character "{i}*pick up the phone*{/i}"
+    dan.character mouth_open_2 "Greetings. {w}Dan is here. {w}May I help you?"
+    "???" "Hello man... {w}It's been a while since I hear your voice. {w}Please remain on your spot because I will visit you."
+    
+    hide Phone
+    with dissolve
+
+    dan.character eyes_surprised mouth_open_2 "WAIT-"
+    dan.character eyes_confused mouth_open_2 "He hung up the phone..."
+    dan.character eyes_confused mouth_flat "Man... {w} Can I have just at least one normal day?"
+    dan.character eyes_closed mouth_open_2 "Let just get back to work Dan."
+    window hide
+    pause 1.0
+    jump gerald_coming
     return
 
 label reject_call:
@@ -167,6 +206,7 @@ label reject_call:
     return
 
 label gerald_coming:
+    $ should_show_side_image = False
     scene black
     with Dissolve(0.1)
 
@@ -184,27 +224,62 @@ label gerald_coming:
 
     scene bg cafe
     with dissolve
-    show Gerald at left
+    show Gerald:
+        xpos 0.25
     with dissolve
 
     gerald.character eyes_happy mouth_open "Surprise, tech nerd! "
     extend "It's been a long time huh?~"
 
     show Gerald mouth_smile
-    show Dan:
-        left
+    show Dan eyes_surprised mouth_flat:
+        xpos 0.75
         xzoom -1.0
-        xanchor -1.0
+        pause 0.5
+        bounce
     with dissolve
-    dan.character mouth_open "NO WAY!!! "
-    extend "IT'S REALLY YOU!!!"
+    dan.character eyes_surprised mouth_open_2 "NO WAY!!! {w} GERALD?!! {w} IS IT REALLY YOU?!!"
 
-    gerald.character eyes_open mouth_open "The one and the only.~"
-    dan.character eyes_happy mouth_open "Gosh! "
-    extend "You have zero idea how much I miss you my friend!"
-    gerald.character eyes_closed mouth_open "Yeah, "
-    extend "I'm sorry for my sudden disappearance. "
-    extend "Should have contact you earlier."
-    dan.character eyes_open mouth_open "Also, why are you here tho? "
-    gerald.character eyes_open "I just miss this city, and also you buddy. "
+    gerald.character eyes_open @ mouth_open "The one and the only.~"
+    dan.character eyes_happy mouth_open "Gosh! {w}You have zero idea how much I miss you my friend! {w} Your phone number always in a busy state."
+    gerald.character @ eyes_closed mouth_open "Yeah, {w}I'm sorry for my sudden disappearance. {w}Life kind of hitting in my throat when I was there."
+    dan.character eyes_confused @ mouth_open "Also, why are you here tho?"
+    gerald.character eyes_open mouth_smile "I just miss this city, and also you buddy. "
+    show Gerald eyes_happy mouth_open
     extend "So I booked a ticket and I have decided that I will stay in here.~"
+    dan.character eyes_happy "Oh great!"
+    dan.character eyes_open "But, "
+    show Dan eyes_confused
+    extend "where are you staying?"
+    gerald.character eyes_open mouth_open "I live in the flat 3 blocks from here. "
+    extend "You can come visit your old friend somtimes.~"
+    dan.character eyes_happy "Oh absolutely! "
+    extend "I can come to your flat every  single day if you want.~"
+    gerald.character eyes_happy mouth_open "Hahahah...~ Fair.~ "
+
+    gerald.character eyes_open mouth_open "May I join what are you doing right now buddy?"
+    dan.character eyes_open mouth_open "Sure thing man!"
+    extend "In fact... "
+    extend "that I need some sort of \"accompany\""
+    gerald.character eyes_happy mouth_open "Hehehe... "
+    extend "Alrighty buddy.~"
+
+    show Dan mouth_smile eyes_open:
+        xpos 0.75
+        unflip
+    
+    pause 0.5
+    hide Dan
+    hide Gerald
+    with easeoutright
+
+    show screen simple_splash_screen("END OF CHAPTER I")
+    $ quick_menu = False
+    with Fade(0.5, 1.0, 0.5, color="#fff")
+    pause(5.0)
+
+    scene black
+    hide screen simple_splash_screen
+    with Dissolve(0.5)
+
+    "Chapter II in development."

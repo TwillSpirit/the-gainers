@@ -96,6 +96,8 @@ style frame:
 ##
 ## https://www.renpy.org/doc/html/screen_special.html#say
 
+default should_show_side_image = False
+
 screen say(who, what):
     style_prefix "say"
 
@@ -114,8 +116,10 @@ screen say(who, what):
 
     ## If there's a side image, display it above the text. Do not display on the
     ## phone variant - there's no room.
-    if not renpy.variant("small"):
+    if not renpy.variant("small") and should_show_side_image:
         add SideImage() xalign 0.0 yalign 1.0
+    if should_show_side_image:
+        add SideImage()
 
 
 ## Make the namebox available for styling through the Character object.
