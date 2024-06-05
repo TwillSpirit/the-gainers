@@ -5,7 +5,7 @@ init python:
             self.character = character
             self.name = name
             
-define dan = Actor(Character(name="Dan", image="Dan", color="#a58338"), "Dan")
+define dan = Actor(Character(name="[persistent.char_name]", image="Dan", color="#a58338"), persistent.char_name)
 define tamcin = Actor(Character(name="Tamcin", image="Tamcin", color="#282835"), "Tamcin")
 define twill = Actor(Character(name="Twill", image="Twill", color="#282835"), "Twill")
 define gerald = Actor(Character(name="Gerald", image="Gerald", color="#835332"), "Gerald")  

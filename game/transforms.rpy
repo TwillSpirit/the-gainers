@@ -1,8 +1,3 @@
-transform offleft:
-    xcenter -0.5 yoffset 100
-transform offright:
-    xcenter 1.5 yoffset 100
-
 transform move_pos(new_pos, time=1.5):
     ease time xcenter new_pos yalign 1.0
 transform new_pos (new_pos):
@@ -18,6 +13,6 @@ transform bounce:
     yoffset 0
 
 transform flip(time=0.3):
-    ease 0.5 xzoom -1.0
+    ease 0.3 xzoom -1.0
 transform unflip(time=0.3):
-    ease 0.5 xzoom 1.0
+    ease 0.3 xzoom 1.0

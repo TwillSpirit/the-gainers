@@ -363,6 +363,13 @@ style navigation_button_text:
     font "fonts/HackNerdFontPropo-Bold.ttf"
     xalign 0.5
 
+style title_style:
+    xpos 100
+    ypos 100
+    font "fonts/NovaFlat-Bold.ttf"
+    color color.white
+    size 72
+    outlines [(absolute(4), color.blue.normal, absolute(0), absolute(0))]
 
 ## Main Menu screen ############################################################
 ##
@@ -380,6 +387,8 @@ screen main_menu():
     ## This empty frame darkens the main menu.
     frame:
         style "main_menu_frame"
+
+    text "I Didn't Sign Up For This!" style "title_style"
 
     ## The use statement includes another screen inside this one. The actual
     ## contents of the main menu are in the navigation screen.
