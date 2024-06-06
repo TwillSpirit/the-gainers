@@ -47,8 +47,7 @@ label story_begin:
     show Dan naked eyes_mid_open mouth_flat
     with dissolve
 
-    dan.character "Shut your mouth Dan. "
-    extend "The day is still young."
+    dan.character "Cut it off [persistent.char_name]. {w}The day is still young."
     dan.character mouth_smile "I'm gonna take a good warm shower now"
 
     hide Dan
@@ -86,12 +85,10 @@ label story_begin:
         xzoom -1.0
     with easeinright
 
-    dan.character normal eyes_happy mouth_open "What a good shower.~"
+    dan.character normal eyes_happy mouth_open "Ah...~ {w}What a nice shower.~"
     dan.character mouth_smile "It helps to lift up my mood.~"
-    dan.character eyes_open mouth_open "Alright! "
-    extend "It's time to do the project.~"
-    dan.character mouth_smile "I think I'll working on it in the cafe as well. "
-    extend "Gotta love the coffee they make.~"
+    dan.character eyes_open mouth_open "Alrighty! {w}It's time to working on the project.~"
+    dan.character mouth_smile "Might gonna do it in the cafe as well. {w}Gotta love the coffee they make.~"
 
     hide Dan
     with easeoutleft
@@ -135,12 +132,10 @@ label story_begin:
 
     $ should_show_side_image = True
     dan.character eyes_happy mouth_open "Alright! "
-    dan.character eyes_open mouth_open "My Laptop's ready, "
-    extend "My coffee's ready! "
-    extend "Let's do this!"
+    dan.character eyes_open mouth_open "My Laptop's ready, {w}My coffee's ready! {w}Let's do this!"
 
     window hide
-    show screen narator_screen("Dan is doing his project for straight 1 hour. When suddenly he got a call from an unknown number.")
+    show screen narator_screen("[persistent.char_name] is doing his project for straight 1 hour. When suddenly he got a call from an unknown number.")
     with Dissolve(0.5)
     pause(3.0)
 
@@ -165,7 +160,6 @@ label story_begin:
         "Don't answer the phone":
             jump reject_call
             pass
-            #block of code to run
         
     return
 
@@ -175,7 +169,7 @@ label answer_call:
     $ should_show_side_image = True
     dan.character eyes_confused mouth_flat "I'll try to answer it."
     dan.character "{i}*pick up the phone*{/i}"
-    dan.character mouth_open_2 "Greetings. {w}Dan is here. {w}May I help you?"
+    dan.character mouth_open_2 "Greetings. {w}[persistent.char_name] speaking. {w}May I help you?"
     "???" "Hello man... {w}It's been a while since I hear your voice. {w}Please remain on your spot because I will visit you."
     
     hide Phone
@@ -186,7 +180,7 @@ label answer_call:
     dan.character eyes_confused mouth_open_2 "He hung up the phone..."
     dan.character eyes_confused mouth_flat "Man... {w} Can I have just at least one normal day?"
     dan.character eyes_confused mouth_open_2 "But also... {w}why does it sounds like [gerald.name] {w}but a bit deep?"
-    dan.character eyes_closed mouth_open_2 "Let just get back to work Dan. {w}Do not let anything distract you right now."
+    dan.character eyes_closed mouth_open_2 "Let just get back to work [persistent.char_name]. {w}Do not let anything distract you right now."
     window hide
     pause 1.0
     jump gerald_coming
@@ -216,41 +210,48 @@ label gerald_coming:
     "???" "Guess who...?~"
     dan.character "GET OFF YOUR HA-"
     dan.character "{i}Wait a minute... {w}That voice... {w}it sounds like the guy on the phone earlier{/i}"
-    dan.character "{i}Shit... {w}I'm so scared...{/i}"
+    dan.character "{i}Shit...{/i} {w}{sc=2}{i}I'm so scared...{/i}{/sc}"
+    window hide
+    
+    pause 1.0
 
     scene bg cafe
     with dissolve
     show Gerald:
-        xpos 0.25
+        xpos 0.5
     with dissolve
 
     gerald.character eyes_happy mouth_open "Surprise, tech nerd! "
     extend "It's been a long time huh?~"
-
-    show Gerald mouth_smile
+    
+    show Gerald mouth_smile at move_pos(0.3, 0.5)
     show Dan eyes_surprised mouth_flat:
-        xpos 0.75
+        xpos 0.7
         xzoom -1.0
         pause 0.5
         bounce
-    with dissolve
+    with easeinright
     dan.character eyes_surprised mouth_open_2 "NO WAY!!! {w} GERALD?!! {w} IS IT REALLY YOU?!!"
 
     gerald.character eyes_open @ mouth_open "The one and the only.~"
-    dan.character "Gosh! {w}you scared the shit out of me!"
-    gerald.character @ eyes_happy mouth_open "Hehehe...~ I'm sorry [dan.name]."
-    dan.character "Also... {w}WHAT AN ABSOLUTE UNIT YOU ARE [gerald.name]! {w}Did you take some steroids? {w}Because no way 4 months can get you this result."
+    dan.character "Gosh! {w}you scared the {sc=2}{b}{color=#ff0000}SHIT OUT OF ME!{/color}{/b}{/sc}"
+    gerald.character @ eyes_happy mouth_open "Hehehe...~ I'm sorry [persistent.char_name]."
+    dan.character "Also... "
+    show Dan at move_pos(0.6, 0.2)
+    extend "WHAT AN ABSOLUTE UNIT YOU ARE MATE! {w}Did you take some steroids or something? {w}Because there is no way 4 months can get you this result."
+    show Dan mouth_flat at move_pos(0.7, 0.2)
     gerald.character eyes_happy mouth_open "Hehehe... {w}Thanks for the compliment nerd. "
     show Gerald eyes_open
     extend "But no. {w}I didn't take any steroid. {w}I have my own way.~"
-    dan.character mouth_open "REALLY?! {w}What is it I wanna know!"
+    show Dan mouth_open at bounce
+    dan.character  "REALLY?! {w}What is it I wanna know!"
     gerald.character eyes_closed mouth_open "It's secret.~"
     dan.character eyes_confused mouth_open_2 "Aw... shucks..."
     gerald.character eyes_happy mouth_smile "Hehehe...~"
     dan.character eyes_open mouth_open "But anyway... "
     show Dan eyes_happy
     dan.character "Gosh I'm so happy to see you again bud!"
-    gerald.character eyes_happy mouth_open "Likewise [dan.name]"
+    gerald.character eyes_happy mouth_open "Likewise [persistent.char_name]"
     dan.character eyes_confused @ mouth_open "Also, {w}why are you here tho?"
     gerald.character eyes_open mouth_smile "I just miss this city, and also you buddy. "
     show Gerald eyes_happy mouth_open

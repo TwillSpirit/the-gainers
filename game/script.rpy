@@ -17,7 +17,7 @@
         
         If you know, go wait for now and touch the grass.
         
-        If you don't, your a dumbhead."""
+        If you don't, you're a dumbhead."""
 
         return
     

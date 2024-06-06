@@ -15,6 +15,7 @@ ehthumbs_vista.db
 *.pyo
 *.pyi
 *.egg-info
+_*.*
 
 # Editor/tool files.
 *~

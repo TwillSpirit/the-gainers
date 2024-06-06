@@ -253,6 +253,7 @@ screen quick_menu():
 
             xalign 0.5
             yalign 1.0
+            yoffset -10
 
             # textbutton _("Back") action Rollback()
             textbutton _("History") action ShowMenu('history')
@@ -278,7 +279,11 @@ style quick_button:
     properties gui.button_properties("quick_button")
 
 style quick_button_text:
-    properties gui.text_properties("quick_button")
+    # properties gui.text_properties("quick_button")
+    font "fonts/NovaFlat-BoldOblique.ttf"
+    color "#ffffff"
+    hover_color "#ceddf0"
+    outlines [ (absolute(2), "#000", absolute(0), absolute(0)) ]
 
 
 ################################################################################
@@ -292,58 +297,114 @@ style quick_button_text:
 
 screen navigation():
 
-    vbox:
-        style_prefix "custom_nav"
+    if renpy.get_screen("main_menu"):
+        hbox:
+            style_prefix "horizontal_nav"
 
-        xpos 25
-        yalign 0.5
+            if main_menu:
 
-        if main_menu:
+                textbutton _("Start") action Start()
 
-            textbutton _("Start") action Start()
+            else:
 
-        else:
+                textbutton _("History") action ShowMenu("history")
 
-            textbutton _("History") action ShowMenu("history")
+                textbutton _("Save") action ShowMenu("save")
 
-            textbutton _("Save") action ShowMenu("save")
+            textbutton _("Load") action ShowMenu("load")
 
-        textbutton _("Load") action ShowMenu("load")
+            textbutton _("Settings") action ShowMenu("preferences")
 
-        textbutton _("Settings") action ShowMenu("preferences")
+            if _in_replay:
 
-        if _in_replay:
+                textbutton _("End Replay") action EndReplay(confirm=True)
 
-            textbutton _("End Replay") action EndReplay(confirm=True)
+            elif not main_menu:
 
-        elif not main_menu:
+                textbutton _("Main Menu") action MainMenu()
 
-            textbutton _("Main Menu") action MainMenu()
+            if main_menu:
+                textbutton _("About") action ShowMenu("about")
 
-        if main_menu:
-            textbutton _("About") action ShowMenu("about")
+            if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
 
-        if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
+                ## Help isn't necessary or relevant to mobile devices.
+                textbutton _("Help") action ShowMenu("help")
 
-            ## Help isn't necessary or relevant to mobile devices.
-            textbutton _("Help") action ShowMenu("help")
+            if renpy.variant("pc"):
 
-        if renpy.variant("pc"):
+                ## The quit button is banned on iOS and unnecessary on Android and
+                ## Web.
+                textbutton _("Quit") action Quit(confirm=not main_menu)
 
-            ## The quit button is banned on iOS and unnecessary on Android and
-            ## Web.
-            textbutton _("Quit") action Quit(confirm=not main_menu)
+            # textbutton _("Return"):
+            #     action Return()
+    else:
+        vbox:
+            style_prefix "custom_nav"
 
-        # textbutton _("Return"):
-        #     action Return()
+            xpos 25
+            yalign 0.5
+
+            if main_menu:
+
+                textbutton _("Start") action Start()
+
+            else:
+
+                textbutton _("History") action ShowMenu("history")
+
+                textbutton _("Save") action ShowMenu("save")
+
+            textbutton _("Load") action ShowMenu("load")
+
+            textbutton _("Settings") action ShowMenu("preferences")
+
+            if _in_replay:
+
+                textbutton _("End Replay") action EndReplay(confirm=True)
+
+            elif not main_menu:
+
+                textbutton _("Main Menu") action MainMenu()
+
+            if main_menu:
+                textbutton _("About") action ShowMenu("about")
+
+            if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
+
+                ## Help isn't necessary or relevant to mobile devices.
+                textbutton _("Help") action ShowMenu("help")
+
+            if renpy.variant("pc"):
+
+                ## The quit button is banned on iOS and unnecessary on Android and
+                ## Web.
+                textbutton _("Quit") action Quit(confirm=not main_menu)
+
+            # textbutton _("Return"):
+            #     action Return()
 
 style custom_nav_button is gui_button
 style custom_nav_button_text is gui_button_text
+
+style horizontal_nav_hbox:
+    yalign 0.95
+    xcenter 0.5
+    spacing 50
 
 style custom_nav_button:
     xpadding 10
     ypadding 14
     xminimum 350
+
+style horizontal_nav_button is custom_nav_button
+style horizontal_nav_button:
+    background color.white
+    ypadding 20
+    xpadding 20
+    outlines [(absolute(4), color.blue.normal, absolute(0), absolute(0))]
+    xminimum 0
     
 style custom_nav_button_text:
     font "fonts/NovaFlat-Bold.ttf"
@@ -353,6 +414,8 @@ style custom_nav_button_text:
     selected_outlines [(absolute(4), color.blue.darkest, absolute(0), absolute(0))]
     size 48
     xalign 0.5
+
+style horizontal_nav_button_text is custom_nav_button_text
 
 style navigation_button:
     size_group "navigation"
@@ -368,8 +431,9 @@ style title_style:
     ypos 100
     font "fonts/NovaFlat-Bold.ttf"
     color color.white
-    size 72
+    size 96
     outlines [(absolute(4), color.blue.normal, absolute(0), absolute(0))]
+
 
 ## Main Menu screen ############################################################
 ##
@@ -388,7 +452,7 @@ screen main_menu():
     frame:
         style "main_menu_frame"
 
-    text "I Didn't Sign Up For This!" style "title_style"
+    text "I Didn't\nSign Up\nFor This!" style "title_style"
 
     ## The use statement includes another screen inside this one. The actual
     ## contents of the main menu are in the navigation screen.
@@ -902,6 +966,7 @@ style check_button:
 style check_button_text:
     properties gui.text_properties("check_button")
     font "fonts/NovaFlatSlim-Book.ttf"
+    yoffset -5
 
 style slider_slider:
     xsize 525

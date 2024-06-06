@@ -344,7 +344,7 @@ define config.history_length = 250
 define gui.history_height = 210
 
 ## Additional space to add between history screen entries.
-define gui.history_spacing = 0
+define gui.history_spacing = -100
 
 ## The position, width, and alignment of the label giving the name of the
 ## speaking character.
