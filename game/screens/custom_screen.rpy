@@ -62,15 +62,27 @@ screen simple_splash_screen(text="This is text"):
       style "splash_screen_vbox"
       text "[text]" style "splash_screen_text"
 
+style credit_text:
+  font "fonts/NovaFlat-Book.ttf"
+
+style credit_title_text is credit_text
+style credit_title_text:
+  size 33
 
 screen credit():
   tag menu
 
+  style_prefix "credit"
+
   use game_menu(_("Credit"), scroll="viewport"):
     vbox:
-      text "-----------------------------------------"
-      text "--------------Music Credit!--------------"
-      text "-----------------------------------------"
+      text "Music" style "credit_title_text"
 
-      text "Imagefilm 017 by Sascha Ende\nFree download: {a=https://filmmusic.io/song/314-imagefilm-017}https://filmmusic.io/song/314-imagefilm-017{/a}\nLicense (CC BY 4.0): {a=https://filmmusic.io/standard-license}https://filmmusic.io/standard-license{/a}"
-      text "-----------------------------------------"
+      text "Imagefilm 017 by Sascha Ende\nFree download: {a=https://filmmusic.io/song/314-imagefilm-017}Link to download{/a}\n{a=https://filmmusic.io/standard-license}License (CC BY 4.0){/a}\n"
+
+      text "Play A Little Game (DECISION) by Sascha Ende\nFree download: {a=https://filmmusic.io/song/249-play-a-little-game-decision}Link to download{/a}\n{a=https://filmmusic.io/standard-license}License (CC BY 4.0){/a}\n"
+
+      text "Team" style "credit_title_text"
+
+      text "Tamcin: Illustrator & Programmer"
+      text "Twill: Story"
