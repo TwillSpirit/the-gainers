@@ -1,0 +1,1 @@
+define audio.tick_tock = "audio/mixkit-tick-tock-clock-timer-1045.wav"

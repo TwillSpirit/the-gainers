@@ -6,7 +6,6 @@ transform bolt_pos(new_pos, time=0.8):
     ease time xcenter new_pos yalign 1.0
 
 transform bounce:
-    pause .15
     yoffset 0
     easein .175 yoffset -30
     easeout .175 yoffset 0

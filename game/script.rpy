@@ -2,6 +2,7 @@
     $ quick_menu = False
     $ should_show_side_image = False
 
+    stop music fadeout 1.0
     scene black
     with Fade(1.0,0.0,1.0,color=color.black)
 
