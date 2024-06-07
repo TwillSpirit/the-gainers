@@ -61,3 +61,16 @@ screen simple_splash_screen(text="This is text"):
     vbox:
       style "splash_screen_vbox"
       text "[text]" style "splash_screen_text"
+
+
+screen credit():
+  tag menu
+
+  use game_menu(_("Credit"), scroll="viewport"):
+    vbox:
+      text "-----------------------------------------"
+      text "--------------Music Credit!--------------"
+      text "-----------------------------------------"
+
+      text "Imagefilm 017 by Sascha Ende\nFree download: {a=https://filmmusic.io/song/314-imagefilm-017}https://filmmusic.io/song/314-imagefilm-017{/a}\nLicense (CC BY 4.0): {a=https://filmmusic.io/standard-license}https://filmmusic.io/standard-license{/a}"
+      text "-----------------------------------------"

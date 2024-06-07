@@ -1,6 +1,5 @@
 define color.white = "#ffffff"
 define color.black = "#000000"
-# define color.black.half = "#000000cc"
 
 define color.red.normal = Color("#DE2121")
 define color.red.dark = Color("#B11B1B")

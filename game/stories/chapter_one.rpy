@@ -14,20 +14,20 @@ label story_begin:
     scene bg dan_room
     with dissolve
 
-    dan.character naked eyes_mid_open mouth_smile "{i}yawn...{/i}"
-    dan.character "Hngggggg... {w}Oh boi... {w} What a good sleep it was.~"
+    dan 011 "{i}yawn...{/i}"
+    dan "Hngggggg... {w}Oh boi... {w} What a good sleep it was.~"
 
     show Dan with dissolve
-    dan.character "... {w}......"
-    dan.character mouth_open_2 "Ah... {w}right... {w} I still have a lot projects need to be done."
-    dan.character mouth_flat "Gosh... {w}I wish I didn't sign for this project. {w}But I have to earn money to stay alive... {w}and last night was a hell of meeting and debugging session."
+    dan "... {w}......"
+    dan 001 "Ah... {w}right... {w} I still have a lot projects need to be done."
+    dan 021 "Gosh... {w}I wish I didn't sign for this project. {w}But I have to earn money to stay alive... {w}and last night was a hell of meeting and debugging session."
     
     show Dan:
         flip
 
-    dan.character "..."
-    dan.character eyes_closed mouth_open_2 "This flat feels empty without {b}him{/b}."
-    dan.character naked eyes_mid_open "He often helped me with this kind of mess."
+    dan "..."
+    dan 000 "This flat feels empty without {b}him{/b}."
+    dan 021 "He often helped me with this kind of mess."
 
 
     hide Dan
@@ -35,20 +35,20 @@ label story_begin:
     scene bg graduated_pic
     with dissolve
 
-    dan.character "Me and Gerald are best friend."
-    dan.character "We went at the same university."
-    dan.character "I am majored at IT, {w}while he is majored at Graphic Design."
-    dan.character "Even tho we were not studied the same thing, {w}his interest in programming stuff is quite high. {w}Often he fixed my buggy program."
-    dan.character "But after the graduation, {w}he got called that he have to went overseas with his parent."
-    dan.character "I tried to call him if he's alright because I quite miss him, {w}but no avail. {w}Because the operator said the number had been expired."
-    dan.character "Gosh... {w}I just really wish that he'll come back visit again."
+    dan "Me and Gerald are best friend."
+    dan "We went at the same university."
+    dan "I am majored at IT, {w}while he is majored at Graphic Design."
+    dan "Even tho we were not studied the same thing, {w}his interest in programming stuff is quite high. {w}Often he fixed my buggy program."
+    dan "But after the graduation, {w}he got called that he have to went overseas with his parent."
+    dan "I tried to call him if he's alright because I quite miss him, {w}but no avail. {w}Because the operator said the number had been expired."
+    dan "Gosh... {w}I just really wish that he'll come back visit again."
 
     scene bg dan_room
-    show Dan naked eyes_mid_open mouth_flat
+    show Dan 001
     with dissolve
 
-    dan.character "Cut it off [persistent.char_name]. {w}The day is still young."
-    dan.character mouth_smile "I'm gonna take a good warm shower now"
+    dan "Cut it off [persistent.char_name]. {w}The day is still young."
+    dan 011 "I'm gonna take a good warm shower now"
 
     hide Dan
     with easeoutright
@@ -57,7 +57,7 @@ label story_begin:
     with dissolve
     pause (3.0)
 
-    dan.character "Gonna turn on this radio as well ~"
+    dan "Gonna turn on this radio as well ~"
     window hide
     pause (2.0)
 
@@ -66,12 +66,12 @@ label story_begin:
     radio.character "With this ring, {w}You can become into an absolute UNIT! {w}You will become STRONGER! {w}BIGGER! {w}And most importantly... {w}you will NOT be called skinny anymore!"
     radio.character "So grab these ring RIGHT NOW!!! {w} We have tested to tenth of people, {w}and everyone LOVE IT!!! {w} Better grab and sign up right now before it's too late!!"
 
-    dan.character "Ring... "
+    dan "Ring... "
     extend "that make you stronger... {w} and bigger?"
-    dan.character "..."
-    dan.character "What a stupid advertisement. {w}No idea of how many folks that fall into that."
-    dan.character "But why does it sound so legit tho?"
-    dan.character "Ah...... {w}probably a scam."
+    dan "..."
+    dan "What a stupid advertisement. {w}No idea of how many folks that fall into that."
+    dan "But why does it sound so legit tho?"
+    dan "Ah...... {w}probably a scam."
 
     show screen simple_splash_screen("After a nice 30 minutes of shower session.")
     with Fade(0.5, 1.0, 0.5, color="#fff")
@@ -85,10 +85,10 @@ label story_begin:
         xzoom -1.0
     with easeinright
 
-    dan.character normal eyes_happy mouth_open "Ah...~ {w}What a nice shower.~"
-    dan.character mouth_smile "It helps to lift up my mood.~"
-    dan.character eyes_open mouth_open "Alrighty! {w}It's time to working on the project.~"
-    dan.character mouth_smile "Might gonna do it in the cafe as well. {w}Gotta love the coffee they make.~"
+    dan 133 "Ah...~ {w}What a nice shower.~"
+    dan 113 "It helps to lift up my mood.~"
+    dan 132 "Alrighty! {w}It's time to working on the project.~"
+    dan 112 "Might gonna do it in the cafe as well. {w}Gotta love the coffee they make.~"
 
     hide Dan
     with easeoutleft
@@ -104,10 +104,10 @@ label story_begin:
     show Dan
     with easeinleft
 
-    dan.character mouth_open "Finally arrived."
-    dan.character eyes_happy "Time to order and do the work!~"
+    dan 132 "Finally arrived."
+    dan "Time to order and do the work!~"
 
-    dan.character eyes_open mouth_smile "{i}What coffee should I order?{/i}"
+    dan 112 "{i}What coffee should I order?{/i}"
 
     menu:
         "Cappuccino":
@@ -117,7 +117,7 @@ label story_begin:
         "Espresso":
             $ coffee_selection = "Espresso"
 
-    dan.character @ mouth_open "Let's order [coffee_selection] this time.~"
+    dan 132 "Let's order [coffee_selection] this time.~"
 
     hide Dan
     with easeoutright
@@ -130,12 +130,12 @@ label story_begin:
     hide screen simple_splash_screen
     with Dissolve(0.5)
 
-    $ should_show_side_image = True
-    dan.character eyes_happy mouth_open "Alright! "
-    dan.character eyes_open mouth_open "My Laptop's ready, {w}My coffee's ready! {w}Let's do this!"
+    $ should_show_side_image = False
+    dan "Alright! "
+    dan "My Laptop's ready, {w}My coffee's ready! {w}Let's do this!"
 
     window hide
-    show screen narator_screen("[persistent.char_name] is doing his project for straight 1 hour. When suddenly he got a call from an unknown number.")
+    show screen narator_screen(f"{persistent.char_name} is doing his project for straight 1 hour. When suddenly he got a call from an unknown number.")
     with Dissolve(0.5)
     pause(3.0)
 
@@ -148,10 +148,9 @@ label story_begin:
     with dissolve
 
     pause 1.0
-    $ should_show_side_image = True
-    dan.character eyes_confused mouth_flat "Hmmm....? {w}Unknown number?"
-    dan.character "I feel reluctant to answer this number..."
-    dan.character "{i}What should I do{/i}"
+    dan "Hmmm....? {w}Unknown number?"
+    dan "I feel reluctant to answer this number..."
+    dan "{i}What should I do{/i}"
 
     menu:
         "Answer the phone":
@@ -166,34 +165,33 @@ label story_begin:
 label answer_call:
     hide Ringing
     with dissolve
-    $ should_show_side_image = True
-    dan.character eyes_confused mouth_flat "I'll try to answer it."
-    dan.character "{i}*pick up the phone*{/i}"
-    dan.character mouth_open_2 "Greetings. {w}[persistent.char_name] speaking. {w}May I help you?"
+    dan  "I'll try to answer it."
+    "{i}*pick up the phone*{/i}"
+    dan  "Greetings. {w}[persistent.char_name] speaking. {w}May I help you?"
     "???" "Hello man... {w}It's been a while since I hear your voice. {w}Please remain on your spot because I will visit you."
     
     hide Phone
     with dissolve
 
-    dan.character eyes_surprised mouth_open_2 "WAIT-"
-    dan.character eyes_surprised mouth_open_2 "..."
-    dan.character eyes_confused mouth_open_2 "He hung up the phone..."
-    dan.character eyes_confused mouth_flat "Man... {w} Can I have just at least one normal day?"
-    dan.character eyes_confused mouth_open_2 "But also... {w}why does it sounds like [gerald.name] {w}but a bit deep?"
-    dan.character eyes_closed mouth_open_2 "Let just get back to work [persistent.char_name]. {w}Do not let anything distract you right now."
+    dan "WAIT-"
+    dan "..."
+    dan "He hung up the phone..."
+    dan "Man... {w} Can I have just at least one normal day?"
+    dan "But also... {w}why does it sounds like Gerald {w}but a bit deep?"
+    dan "Let just get back to work [persistent.char_name]. {w}Do not let anything distract you right now."
     window hide
     pause 1.0
     jump gerald_coming
     return
 
 label reject_call:
-    dan.character "Yeah no, I'm gonna reject it. {w}Probably some sort of scam or something."
+    dan "Yeah no, I'm gonna reject it. {w}Probably some sort of scam or something."
 
     hide Phone
     hide Ringing
     with dissolve
 
-    dan.character "Now let's get back to work."
+    dan "Now let's get back to work."
     window hide
     pause 1.0
     jump gerald_coming
@@ -206,11 +204,11 @@ label gerald_coming:
 
     pause 1.0
     
-    dan.character "WHAAAA--!!!"
-    "???" "Guess who...?~"
-    dan.character "GET OFF YOUR HA-"
-    dan.character "{i}Wait a minute... {w}That voice... {w}it sounds like the guy on the phone earlier{/i}"
-    dan.character "{i}Shit...{/i} {w}{sc=2}{i}I'm so scared...{/i}{/sc}"
+    dan "WHAAAA--!!!"
+    "???" "{bt=3}Guess who...?~{/bt}"
+    dan "GET OFF YOUR HA-"
+    dan "{i}Wait a minute... {w}That voice... {w}it sounds like the guy on the phone earlier{/i}"
+    dan "{i}Shit...{/i} {w}{sc=2}{i}I'm so scared...{/i}{/sc}"
     window hide
     
     pause 1.0
@@ -221,55 +219,56 @@ label gerald_coming:
         xpos 0.5
     with dissolve
 
-    gerald.character eyes_happy mouth_open "Surprise, tech nerd! "
+    gerald 122 "Surprise, tech nerd! "
     extend "It's been a long time huh?~"
     
-    show Gerald mouth_smile at move_pos(0.3, 0.5)
-    show Dan eyes_surprised mouth_flat:
+    show Gerald 111 at move_pos(0.3, 0.5)
+    show Dan 124:
         xpos 0.7
         xzoom -1.0
         pause 0.5
         bounce
     with easeinright
-    dan.character eyes_surprised mouth_open_2 "NO WAY!!! {w} GERALD?!! {w} IS IT REALLY YOU?!!"
+    dan 124 "NO WAY!!! {w} GERALD?!! {w} IS IT REALLY YOU?!!"
 
-    gerald.character eyes_open @ mouth_open "The one and the only.~"
-    dan.character "Gosh! {w}you scared the {sc=2}{b}{color=#ff0000}SHIT OUT OF ME!{/color}{/b}{/sc}"
-    gerald.character @ eyes_happy mouth_open "Hehehe...~ I'm sorry [persistent.char_name]."
-    dan.character "Also... "
-    show Dan at move_pos(0.6, 0.2)
+    gerald 120 "The one and the only.~"
+    dan "Gosh! {w}you scared the {sc=2}{b}{color=#ff0000}SHIT OUT OF ME!{/color}{/b}{/sc}"
+    gerald 122 "Hehehe...~ I'm sorry [persistent.char_name]."
+    dan 124 "Also... "
+    show Dan 126 at move_pos(0.6, 0.2)
     extend "WHAT AN ABSOLUTE UNIT YOU ARE MATE! {w}Did you take some steroids or something? {w}Because there is no way 4 months can get you this result."
-    show Dan mouth_flat at move_pos(0.7, 0.2)
-    gerald.character eyes_happy mouth_open "Hehehe... {w}Thanks for the compliment nerd. "
-    show Gerald eyes_open
+    show Dan at move_pos(0.7, 0.2)
+    gerald 122 "Hehehe... {w}Thanks for the compliment nerd. "
+    show Gerald 112
     extend "But no. {w}I didn't take any steroid. {w}I have my own way.~"
-    show Dan mouth_open at bounce
-    dan.character  "REALLY?! {w}What is it I wanna know!"
-    gerald.character eyes_closed mouth_open "It's secret.~"
-    dan.character eyes_confused mouth_open_2 "Aw... shucks..."
-    gerald.character eyes_happy mouth_smile "Hehehe...~"
-    dan.character eyes_open mouth_open "But anyway... "
-    show Dan eyes_happy
-    dan.character "Gosh I'm so happy to see you again bud!"
-    gerald.character eyes_happy mouth_open "Likewise [persistent.char_name]"
-    dan.character eyes_confused @ mouth_open "Also, {w}why are you here tho?"
-    gerald.character eyes_open mouth_smile "I just miss this city, and also you buddy. "
-    show Gerald eyes_happy mouth_open
+    show Dan 134 at bounce
+    dan  "REALLY?! {w}What is it I wanna know!"
+    gerald 110 "It's secret.~"
+    dan 125 "Aw... shucks..."
+    gerald 122 "Hehehe...~"
+    dan 132 "But anyway... "
+    show Dan 133
+    dan "Gosh I'm so happy to see you again bud! {w} 4 months but felt like years.~"
+    gerald 122 "Likewise [persistent.char_name]"
+    dan 135 "Also, {w}why are you here tho?"
+    gerald 123 "You know...? {w}I just miss this city, and also you buddy. "
+    show Gerald 122
     extend "So I booked a ticket and I have decided that I will stay in here.~"
-    dan.character eyes_happy "Oh great! "
-    show Dan eyes_open
+    dan 133 "Oh great! "
+    show Dan 132
     extend "But, "
-    show Dan eyes_confused
+    show Dan 135
     extend "where are you staying?"
-    gerald.character eyes_open mouth_open "I live in the flat 3 blocks from here. {w}You can come visit your old friend sometimes.~"
-    dan.character eyes_happy "Oh absolutely! {w}I can come to your flat every single day if you want.~"
-    gerald.character eyes_happy mouth_open "Hahahah...~ Fair.~ "
+    gerald 121 "I live in the flat 3 blocks from here. {w}You can come visit your old friend sometimes.~"
+    dan 133 "Oh absolutely! {w}I can come to your flat every single day if you want.~"
+    gerald 122 "Hahahah...~ Fair.~ "
 
-    gerald.character eyes_open mouth_open "May I join what are you doing right now buddy?"
-    dan.character eyes_open mouth_open "Sure thing man! {w}In fact... {w}I need some sort of \"accompany\""
-    gerald.character eyes_happy mouth_open "Hehehe... {w}Very well nerdy.~"
+    gerald 123 "Hey! I know you're busy right now but, {w}may I join what are you doing right now buddy?"
+    dan "Sure thing man! {w}In fact... {w}I need some sort of {bt=3}\"accompany\"{/bt}"
+    show Dan 113
+    gerald 122 "Hehehe... {w}Very well {bt=3}nerdy boi.~{/bt}"
 
-    show Dan mouth_smile eyes_open:
+    show Dan:
         xpos 0.75
         unflip
     

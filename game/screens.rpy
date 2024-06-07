@@ -303,39 +303,41 @@ screen navigation():
 
             if main_menu:
 
-                textbutton _("Start") action Start()
+                textbutton _("Start") action [Play("sound", "audio/selected.wav"), Start()] hovered [Play("sound", "audio/click.wav")] 
 
             else:
 
-                textbutton _("History") action ShowMenu("history")
+                textbutton _("History") action ShowMenu("history") hovered [Play("sound", "audio/click.wav")] 
 
-                textbutton _("Save") action ShowMenu("save")
+                textbutton _("Save") action ShowMenu("save") hovered [Play("sound", "audio/click.wav")] 
 
-            textbutton _("Load") action ShowMenu("load")
+            textbutton _("Load") action [Play("sound", "audio/selected.wav"), ShowMenu("load")] hovered [Play("sound", "audio/click.wav")] 
 
-            textbutton _("Settings") action ShowMenu("preferences")
+            textbutton _("Settings") action [Play("sound", "audio/selected.wav"),ShowMenu("preferences")] hovered [Play("sound", "audio/click.wav")] 
 
             if _in_replay:
 
-                textbutton _("End Replay") action EndReplay(confirm=True)
+                textbutton _("End Replay") action EndReplay(confirm=True) hovered [Play("sound", "audio/click.wav")] 
 
             elif not main_menu:
 
-                textbutton _("Main Menu") action MainMenu()
+                textbutton _("Main Menu") action MainMenu() hovered [Play("sound", "audio/click.wav")] 
 
             if main_menu:
-                textbutton _("About") action ShowMenu("about")
+                textbutton _("About") action [Play("sound", "audio/selected.wav"), ShowMenu("about")] hovered [Play("sound", "audio/click.wav")] 
+
+                textbutton _("Credit") action [Play("sound", "audio/selected.wav"), ShowMenu("credit")] hovered [Play("sound", "audio/click.wav")] 
 
             if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
 
                 ## Help isn't necessary or relevant to mobile devices.
-                textbutton _("Help") action ShowMenu("help")
+                textbutton _("Help") action [Play("sound", "audio/selected.wav"),ShowMenu("help")]
 
             if renpy.variant("pc"):
 
                 ## The quit button is banned on iOS and unnecessary on Android and
                 ## Web.
-                textbutton _("Quit") action Quit(confirm=not main_menu)
+                textbutton _("Quit") action [Play("sound", "audio/selected.wav"),Quit(confirm=not main_menu)] hovered [Play("sound", "audio/click.wav")] 
 
             # textbutton _("Return"):
             #     action Return()
@@ -345,42 +347,45 @@ screen navigation():
 
             xpos 25
             yalign 0.5
+            yoffset -100
 
             if main_menu:
 
-                textbutton _("Start") action Start()
+                textbutton _("Start") action Start() hovered [Play("sound", "audio/click.wav")] 
 
             else:
 
-                textbutton _("History") action ShowMenu("history")
+                textbutton _("History") action ShowMenu("history") hovered [Play("sound", "audio/click.wav")] 
 
-                textbutton _("Save") action ShowMenu("save")
+                textbutton _("Save") action ShowMenu("save") hovered [Play("sound", "audio/click.wav")] 
 
-            textbutton _("Load") action ShowMenu("load")
+            textbutton _("Load") action ShowMenu("load") hovered [Play("sound", "audio/click.wav")] 
 
-            textbutton _("Settings") action ShowMenu("preferences")
+            textbutton _("Settings") action ShowMenu("preferences") hovered [Play("sound", "audio/click.wav")] 
 
             if _in_replay:
 
-                textbutton _("End Replay") action EndReplay(confirm=True)
+                textbutton _("End Replay") action EndReplay(confirm=True) hovered [Play("sound", "audio/click.wav")] 
 
             elif not main_menu:
 
-                textbutton _("Main Menu") action MainMenu()
+                textbutton _("Main Menu") action MainMenu() hovered [Play("sound", "audio/click.wav")] 
 
             if main_menu:
-                textbutton _("About") action ShowMenu("about")
+                textbutton _("About") action ShowMenu("about") hovered [Play("sound", "audio/click.wav")]
+
+                textbutton _("Credit") action ShowMenu("credit") hovered [Play("sound", "audio/click.wav")] 
 
             if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
 
                 ## Help isn't necessary or relevant to mobile devices.
-                textbutton _("Help") action ShowMenu("help")
+                textbutton _("Help") action ShowMenu("help") hovered [Play("sound", "audio/click.wav")] 
 
             if renpy.variant("pc"):
 
                 ## The quit button is banned on iOS and unnecessary on Android and
                 ## Web.
-                textbutton _("Quit") action Quit(confirm=not main_menu)
+                textbutton _("Quit") action Quit(confirm=not main_menu) hovered [Play("sound", "audio/click.wav")] 
 
             # textbutton _("Return"):
             #     action Return()
@@ -400,9 +405,9 @@ style custom_nav_button:
 
 style horizontal_nav_button is custom_nav_button
 style horizontal_nav_button:
-    background color.white
-    ypadding 20
-    xpadding 20
+    background "#00000033"
+    ypadding 8
+    xpadding 12
     outlines [(absolute(4), color.blue.normal, absolute(0), absolute(0))]
     xminimum 0
     
@@ -431,7 +436,8 @@ style title_style:
     ypos 100
     font "fonts/NovaFlat-Bold.ttf"
     color color.white
-    size 96
+    text_align 0.5
+    size 128
     outlines [(absolute(4), color.blue.normal, absolute(0), absolute(0))]
 
 
@@ -575,7 +581,7 @@ screen game_menu(title, scroll=None, yinitial=0.0, spacing=0):
     textbutton _("Return"):
         style "return_button"
 
-        action Return()
+        action [Play("sound", "audio/selected.wav"), Return()] hovered [Play("sound", "audio/click.wav")] 
 
     label title
 
@@ -715,7 +721,7 @@ screen file_slots(title):
 
                 key_events True
                 xalign 0.5
-                action page_name_value.Toggle()
+                action [Play("sound", "audio/selected.wav"),page_name_value.Toggle()]
 
                 input:
                     style "page_label_text"
@@ -736,6 +742,7 @@ screen file_slots(title):
 
                     button:
                         action FileAction(slot)
+                        hovered [Play("sound", "audio/click.wav")]
 
                         has vbox
 

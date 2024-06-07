@@ -1,11 +1,11 @@
 ﻿label start:
     $ quick_menu = False
-    $ should_show_side_image = False    
+    $ should_show_side_image = False
 
     scene black
     with Fade(1.0,0.0,1.0,color=color.black)
 
-    if persistent.char_name == "" and persistent.chapter_one_complete == False:
+    if persistent.chapter_one_complete == False:
         $ persistent.char_name = renpy.input("What is your name?", "Dan")
         $ persistent.char_name = persistent.char_name.strip()
 

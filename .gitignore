@@ -39,6 +39,9 @@ saves/
 tmp/
 cache/
 /illustrations
+test/
+
+image_combiner.py
 
 
 # Executables.
