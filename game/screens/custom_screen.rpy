@@ -66,8 +66,29 @@ style credit_text:
   font "fonts/NovaFlat-Book.ttf"
 
 style credit_title_text is credit_text
+style credit_button_text is credit_text
+
 style credit_title_text:
   size 33
+
+style credit_hbox:
+  spacing 10
+
+style credit_button:
+  background color.blue.normal
+  xpadding 10
+  ypadding 10
+  hover_background color.blue.dark
+
+style credit_button_text:
+  font "fonts/NovaFlat-Bold.ttf"
+  color color.white
+
+style patreon_button is credit_button
+style patreon_button_text is credit_button_text
+style patreon_button:
+  background "#df7132"
+  hover_background "#bd5920"
 
 screen credit():
   tag menu
@@ -85,4 +106,12 @@ screen credit():
       text "Team" style "credit_title_text"
 
       text "Tamcin: Illustrator & Programmer"
-      text "Twill: Story"
+      text "Twill: Story\n"
+
+      text "Social Media" style "credit_title_text"
+      hbox:
+        textbutton _('Tamcin\'s Twitter / X') action OpenURL("https://x.com/VoidFoxTamcin")
+
+        textbutton _('Tamcin\'s Patreon') action OpenURL("patreon.com/VoidFoxTamcin") style "patreon_button"
+
+        textbutton _('Twill\'s Twitter / X') action OpenURL("https://x.com/twillthespirit")

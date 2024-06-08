@@ -1,26 +1,3 @@
-layeredimage Tamcin:
-    fit "scale-down"
-
-    group base:
-        attribute normal default:
-            "tamcin_base"
-        attribute arm_up:
-            "tamcin_raise_arm"
-
-    group eyes:
-        attribute idle default:
-            "tamcin_expression_idle"
-        attribute blink:
-            "tamcin_expression_blink"
-        attribute happy:
-            "tamcin_expression_happy"
-
-    group mouth:
-        attribute shut default:
-            "tamcin_mouth_close"
-        attribute talk:
-            "tamcin_mouth_open"
-
 layeredimage Twill:
     fit "scale-down"
 
@@ -29,17 +6,17 @@ layeredimage Twill:
             "twill_base"
 
     group eyes:
-        attribute idle default:
+        attribute eyes_open default:
             "twill_eyes_open"
-        attribute blink:
+        attribute eyes_close:
             "twill_eyes_close"
-        attribute happy:
+        attribute eyes_happy:
             "twill_eyes_happy"
 
     group mouth:
-        attribute shut default:
+        attribute mouth_smile default:
             "twill_mouth_close"
-        attribute talk:
+        attribute mouth_open:
             "twill_mouth_open"
 
 image Phone:
@@ -63,3 +40,25 @@ image Ringing:
     "item handphone_ring_4"
     pause 0.2
     repeat
+
+# Image for scene
+image bg alarm:
+    "scene/bg alarm.png"
+image bg beach:
+    "scene/bg beach.png"
+image bg city:
+    "scene/bg city.png"
+image bg coding_session:
+    "scene/bg coding_session.png"
+image bg dan_gerald_talk:
+    "scene/bg dan_gerald_talk.png"
+image bg dan_room:
+    "scene/bg dan_room.png"
+image bg gerald_room_day:
+    "scene/bg gerald_room_day.png"
+image bg gerald_room_night:
+    "scene/bg gerald_room_night.png"
+image bg graduated_pic:
+    "scene/bg graduated_pic.png"
+image bg shower:
+    "scene/bg shower.png"

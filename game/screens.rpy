@@ -458,7 +458,7 @@ screen main_menu():
     frame:
         style "main_menu_frame"
 
-    text "I Didn't\nSign Up\nFor This!" style "title_style"
+    text "{bt=10}{=title_style}I Didn't\nSign Up\nFor This!{/bt}" style "title_style"
 
     ## The use statement includes another screen inside this one. The actual
     ## contents of the main menu are in the navigation screen.
