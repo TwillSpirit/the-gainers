@@ -62,3 +62,7 @@ image bg graduated_pic:
     "scene/bg graduated_pic.png"
 image bg shower:
     "scene/bg shower.png"
+image bg corridor:
+    "scene/bg corridor.png"
+image bg pecs:
+    "scene/scene pecs_massage.png"

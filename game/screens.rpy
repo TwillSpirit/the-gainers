@@ -408,7 +408,8 @@ style horizontal_nav_button:
     background "#00000033"
     ypadding 8
     xpadding 12
-    outlines [(absolute(4), color.blue.normal, absolute(0), absolute(0))]
+    # outlines [(absolute(4), color.blue.normal, absolute(0), absolute(0))]
+    outlines [(2, "#FFFFFF", 0, 0)]
     xminimum 0
     
 style custom_nav_button_text:

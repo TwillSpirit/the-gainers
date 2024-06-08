@@ -103,6 +103,8 @@ screen credit():
 
       text "Play A Little Game (DECISION) by Sascha Ende\nFree download: {a=https://filmmusic.io/song/249-play-a-little-game-decision}Link to download{/a}\n{a=https://filmmusic.io/standard-license}License (CC BY 4.0){/a}\n"
 
+      text "Cinematic Suspense Series Episode 008 by Sascha Ende\n{a=https://filmmusic.io/song/7669-cinematic-suspense-series-episode-008}Link to download{/a}\n{a=https://filmmusic.io/standard-license}License (CC BY 4.0){/a}"
+
       text "Team" style "credit_title_text"
 
       text "Tamcin: Illustrator & Programmer"

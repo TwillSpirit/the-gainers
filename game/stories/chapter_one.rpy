@@ -5,7 +5,7 @@ label story_begin:
     $ quick_menu = True
     with Fade(1.0, 1.0, 1.0, color=color.white)
 
-    play music tick_tock
+    play music tick_tock loop
     """{b}WAKEY WAKEY WAKEY YOU SLEEPY HEAD!!!{/b}
 
     {b}IT'S 7 O'CLOCK AND IT'S A BRAND NEW DAY!!!{/b}
@@ -29,8 +29,10 @@ label story_begin:
     show Dan:
         flip
 
+    play music cinematic_suspense
+
     dan "..."
-    dan eyes_closed_confused "This flat feels empty without {b}him{/b}."
+    dan eyes_close_confused "This flat feels empty without {b}him{/b}."
     dan "He often helped me with this kind of mess."
 
 
@@ -48,7 +50,7 @@ label story_begin:
     dan "Gosh... {w}I just really wish that he'll come back visit again."
 
     scene bg dan_room
-    show Dan eyes_closed_confused
+    show Dan eyes_close_confused
     with dissolve
 
     dan "Cut it off [persistent.char_name]. {w}The day is still young."
@@ -57,8 +59,11 @@ label story_begin:
     hide Dan
     with easeoutright
 
+    stop music fadeout 1.0
+
     scene bg shower
     with dissolve
+    play music shower
     pause (3.0)
 
     dan "Gonna turn on this radio as well ~"
@@ -77,9 +82,12 @@ label story_begin:
     dan "But why does it sound so legit tho?"
     dan "Ah...... {w}probably a scam."
 
+    stop music fadeout 1.0
     show screen simple_splash_screen("After a nice 30 minutes of shower session.")
     with Fade(0.5, 1.0, 0.5, color="#fff")
     pause(2.0)
+
+    play music a_little_game
     
     scene bg dan_room
     hide screen simple_splash_screen
@@ -186,14 +194,14 @@ label answer_call:
     dan eyes_open_confused "He hung up the phone..."
     dan "Man... {w} Can I have just at least one normal day?"
     dan mouth_frown "But also... {w}why does it sounds like Gerald {w}but a bit deep?"
-    dan eyes_closed_confused "I'm just gonna continue my job. {w}Do not let anything distract you right now."
+    dan eyes_close_confused "I'm just gonna continue my job. {w}Do not let anything distract you right now."
     window hide
     pause 1.0
     jump gerald_coming
     return
 
 label reject_call:
-    dan covered eyes_closed_confused mouth_frown "Yeah no, I'm gonna reject it. {w}Probably some sort of scam or something."
+    dan covered eyes_close_confused mouth_frown "Yeah no, I'm gonna reject it. {w}Probably some sort of scam or something."
 
     hide Phone
     hide Ringing
@@ -206,6 +214,7 @@ label reject_call:
     return
 
 label gerald_coming:
+    stop music
     $ should_show_side_image = False
     scene black
     with Dissolve(0.1)
@@ -229,6 +238,8 @@ label gerald_coming:
 
     gerald eyes_happy mouth_smile_open "Surprise, tech nerd! "
     extend "It's been a long time huh?~"
+
+    play music cinematic_suspense
     
     show Gerald at move_pos(0.3, 0.5)
     show Dan covered eyes_surprised:
@@ -287,6 +298,7 @@ label gerald_coming:
     with easeoutright
 
     show screen simple_splash_screen("END OF CHAPTER I")
+    stop music fadeout 1.0
     $ quick_menu = False
     with Fade(0.5, 1.0, 0.5, color="#fff")
     pause(5.0)
