@@ -261,9 +261,9 @@ label gerald_coming:
     
     dan "Gosh! {w}you scared the {sc=2}{b}{color=#ff0000}SHIT OUT OF ME!{/color}{/b}{/sc}"
     gerald eyes_happy mouth_smile"Hehehe...~ I'm sorry [persistent.char_name]."
-    dan mouth_frown "Also... "
+    dan mouth_frown "Dude... "
     show Dan mouth_frown_open at move_pos(0.6, 0.2)
-    extend "WHAT AN ABSOLUTE UNIT YOU ARE DUDE! {w}Did you take steroids or something? {w}We haven't met for 4 months and there is no way you can get THIS big within such a small period of time."
+    extend "WHAT AN ABSOLUTE UNIT YOU ARE! {w}Did you take steroids or something? {w}We haven't met for 4 months and there is no way you can get THIS big within such a small period of time."
     show Dan eyes_surprised_confused mouth_frown at move_pos(0.7, 0.2)
     gerald mouth_smile_open "Hehehe... {w}Thanks for the compliment nerd. "
     show Gerald eyes_open
@@ -313,7 +313,7 @@ label gerald_coming:
     $ persistent.chapter_one_complete = True
     hide screen simple_splash_screen
 
-    show screen splash_screen("CHAPTER 2", "WHEERE IT ALL STARTED")
+    show screen splash_screen("CHAPTER 2", "WHERE IT ALL STARTED")
     with Fade(0.5,1.0,0.5,color=color.white)
     pause(2.0)
     jump chapter_two

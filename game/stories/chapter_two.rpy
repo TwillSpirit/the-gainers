@@ -108,7 +108,7 @@ label chapter_two:
 
   dan eyes_close mouth_smile_open "And... done~!"
   
-  dan eyes_close_confused "Man, that's a hell lot of stuff"
+  dan eyes_close_confused "Man, that was a whole lot of stuff"
   
   gerald eyes_open mouth_smile_open "So you're finally finished with this project, right?"
   
@@ -145,11 +145,11 @@ label chapter_two:
     xpos 0.35
     unflip
 
-  dan eyes_happy mouth_smile_open "Hey man, thanks a ton for accompanying me and helping me with this project and that bit with the error.~"
+  dan eyes_happy mouth_smile_open "Hey man, thanks a ton for accompanying me and helping me with this project and the error.~"
   
   gerald eyes_happy mouth_smile_open "Ay~ {w}no problem nerd boi.~\n{w}I'm glad that I was able to help you again."
   
-  dan eyes_open mouth_smile_open "Say Gerald.{w} Do you have anything in mind of what you're gonna do for today, after I leave?"
+  dan eyes_open mouth_smile_open "Say Gerald.{w} Do you have anything in mind of what you're gonna do today, after I leave?"
   
   gerald eyes_open mouth_smile_open "Oh!{w} Well actually...{w} I wanna invite you to my flat tonight!.\n"
   
@@ -163,7 +163,7 @@ label chapter_two:
     
   dan "{i}gasp!{/i} {w}You still wanna do that?!"
   
-  gerald "I just miss our good ol' quality time nerd boi.{w} So... {w}{bt=2}wanna come and join...?~{/bt}"
+  gerald "I just miss our good ol' quality time, nerd boi.{w} So... {w}{bt=2}wanna come and join...?~{/bt}"
   
   show Dan eyes_happy_angry mouth_smile_open:
     xpos 0.35
@@ -173,7 +173,7 @@ label chapter_two:
   
   gerald mouth_smile "Hehehe...{w} I knew you would join for that shit.~"
   
-  gerald mouth_smile_open "Meet me at my flat room 133, got that [persistent.char_name]?"
+  gerald mouth_smile_open "Meet me at my flat, room 133, got that [persistent.char_name]?"
   
   dan eyes_open_angry "YOU BET!"
 
@@ -192,9 +192,9 @@ label chapter_two:
   #   ease xcenter 0.5
   #   bounce
 
-  # dan "WAIT!!{w} I FORGOT THAT NOW HE IS SO JACKED!!!"
+  # dan "WAIT!!{w} I FORGOT THAT NOW HE'S JACKED!!!"
 
-  # dan eyes_surprised_confused "OH FUCK, OH FUCK, OH FUCK, OH FUCK\n{w}WHY DID I SIGN FOR THIS?!!!"
+  # dan eyes_surprised_confused "OH FUCK, OH FUCK, OH FUCK, OH FUCK\n{w}WHY DID I SIGN UP FOR THIS?!!!"
 
   scene black
   with Dissolve(2.0)
