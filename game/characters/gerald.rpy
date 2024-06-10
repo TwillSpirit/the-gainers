@@ -1,4 +1,17 @@
-define gerald = Character(name="Gerald", image="Gerald", color="#835332")
+define sounds = ['audio/typewritting_sounds/B1.ogg']
+
+init python:
+  def type_sound(event, interact=True, **kwargs):
+    if not interact:
+      return
+
+    if event == "show": #if text's being written by character, spam typing sounds until the text ends
+        renpy.sound.play(renpy.random.choice(sounds), loop=True)
+
+    elif event == "slow_done" or event == "end":
+      renpy.sound.stop()
+
+define gerald = Character(name="Gerald", image="Gerald", color="#835332", callback=type_sound)
 
 init:
   layeredimage Gerald:

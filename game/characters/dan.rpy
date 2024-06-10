@@ -1,4 +1,18 @@
-define dan = Character(name="[persistent.char_name]", image="Dan", color="#a58338")
+# define sounds = ['audio/typewritting_sounds/B1.ogg', 'audio/typewritting_sounds/B2.ogg', 'audio/typewritting_sounds/B3.ogg', 'audio/typewritting_sounds/B4.ogg', 'audio/typewritting_sounds/B5.ogg']
+define sounds = ['audio/typewritting_sounds/B1.ogg']
+
+init python:
+  def type_sound(event, interact=True, **kwargs):
+    if not interact:
+      return
+
+    if event == "show": #if text's being written by character, spam typing sounds until the text ends
+      renpy.sound.play(renpy.random.choice(sounds), loop=True, channel="sound")
+
+    elif event == "slow_done" or event == "end":
+      renpy.sound.stop(channel="sound")
+
+define dan = Character(name="[persistent.char_name]", image="Dan", color="#a58338", callback=type_sound)
 define radio = Character(name="Radio",  color="#282835")
 
 init:
