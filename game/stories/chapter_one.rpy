@@ -1,6 +1,7 @@
-default coffee_selection = ""
+default coffee_selection = "" # Store variable for the coffee selection
+default pickup_phone = False # Store variable if Dan picking up the phone or not
 
-label story_begin:
+label chapter_one:
     scene bg alarm
     $ quick_menu = True
     with Fade(1.0, 1.0, 1.0, color=color.white)
@@ -18,12 +19,12 @@ label story_begin:
     with dissolve
 
     dan eyes_lazy"{i}yawn...{/i}"
-    dan "Hngggggg... {w}Oh boi... {w} What a good sleep it was.~"
+    dan "Hngggggg... {w}Oh boi... {w}What a good sleep it was.~"
 
     show Dan with dissolve
 
     dan "... {w}......"
-    dan mouth_frown"Ah... {w}right... {w} I still have a lot projects need to be done."
+    dan mouth_frown"Ah... {w}right... {w}I still have a lot projects need to be done."
     dan eyes_lazy_confused "Gosh... {w}I wish I didn't sign for this project. {w}But I have to earn money to stay alive... {w}and last night was a hell of meeting and debugging session."
     
     show Dan:
@@ -73,10 +74,10 @@ label story_begin:
     window show
     radio "Tired of being called skinny? {w}SAY NO MORE!"
     radio "With this ring, {w}You can become into an absolute UNIT! {w}You will become STRONGER! {w}BIGGER! {w}And most importantly... {w}you will NOT be called skinny anymore!"
-    radio "So grab these ring RIGHT NOW!!! {w} We have tested to tenth of people, {w}and everyone LOVE IT!!! {w} Better grab and sign up right now before it's too late!!"
+    radio "So grab these ring RIGHT NOW!!! {w}We have tested to tenth of people, {w}and everyone LOVE IT!!! {w}Better grab and sign up right now before it's too late!!"
 
     dan "Ring... "
-    extend "that make you stronger... {w} and bigger?"
+    extend "that make you stronger... {w}and bigger?"
     dan "..."
     dan "What a stupid advertisement. {w}No idea of how many folks that fall into that."
     dan "But why does it sound so legit tho?"
@@ -170,9 +171,11 @@ label story_begin:
 
     menu:
         "Answer the phone":
+            $ pickup_phone = True # Set the variable pickup_phone to True
             jump answer_call
             pass
         "Don't answer the phone":
+            $ pickup_phone = False # Set the variable pickup_phone to False
             jump reject_call
             pass
         
@@ -189,10 +192,10 @@ label answer_call:
     hide Phone
     with dissolve
 
-    dan eyes_surprised mouth_frown_open "WAIT-"
+    dan eyes_surprised mouth_wide "WAIT-"
     dan "..."
-    dan eyes_open_confused "He hung up the phone..."
-    dan "Man... {w} Can I have just at least one normal day?"
+    dan eyes_open_confused mouth_frown_open "He hung up the phone..."
+    dan "Man... {w}Can I have just at least one normal day?"
     dan mouth_frown "But also... {w}why does it sounds like Gerald {w}but a bit deep?"
     dan eyes_close_confused "I'm just gonna continue my job. {w}Do not let anything distract you right now."
     window hide
@@ -223,9 +226,10 @@ label gerald_coming:
     
     dan "WHAAAA--!!!"
     "???" "{bt=3}Guess who...?~{/bt}"
-    dan "GET OFF YOUR HA-"
-    dan "{i}Wait a minute... {w}That voice... {w}it sounds like the guy on the phone earlier{/i}"
-    dan "{i}Shit...{/i} {w}{sc=2}{i}I'm so scared...{/i}{/sc}"
+    dan "GET OFF YOUR HAND FROM MY FACE!!!"
+    "???" "{bt=3}Nope, {w}I will let my hands off whenever I want tech nerd~{/bt}"
+    dan "{i}Shit... {w}who the fuck is this guy...{/i}\n{w}{sc=2}{i}Shit... {w} I'm so scared...{/i}{/sc}"
+    # dan "{i}Wait a minute... {w}That voice... {w}it sounds like the guy on the phone earlier{/i}"
     window hide
     
     pause 1.0
@@ -236,8 +240,7 @@ label gerald_coming:
         xpos 0.5
     with dissolve
 
-    gerald eyes_happy mouth_smile_open "Surprise, tech nerd! "
-    extend "It's been a long time huh?~"
+    gerald eyes_happy mouth_smile_open "Surprise, tech nerd! {w}It's been a long time huh?~"
 
     play music cinematic_suspense
     
@@ -251,11 +254,16 @@ label gerald_coming:
     dan mouth_frown_open "NO WAY!!! {w}GERALD?!! {w}THE BROWN DAWG?!!! {w}MY BESTIE?!! {w}FOR REAL?!!"
 
     gerald eyes_open "The one and the only.~"
+
+    if pickup_phone == True: # If Dan picked up the phone earlier, run this extra dialouge
+        dan "So you're the one who called me with unkown number?!"
+        gerald "Yeah!~ I wanna give you a surprise so I have to change my number ~"
+    
     dan "Gosh! {w}you scared the {sc=2}{b}{color=#ff0000}SHIT OUT OF ME!{/color}{/b}{/sc}"
     gerald eyes_happy mouth_smile"Hehehe...~ I'm sorry [persistent.char_name]."
     dan mouth_frown "Also... "
     show Dan mouth_frown_open at move_pos(0.6, 0.2)
-    extend "WHAT AN ABSOLUTE UNIT YOU ARE MATE! {w}Did you take some steroids or something? {w}Because there is no way 4 months can get you this result."
+    extend "WHAT AN ABSOLUTE UNIT YOU ARE MATE! {w}Did you take some steroids or something? {w}Because we haven't met for 4 months and there is no way that 4 months can get you this result."
     show Dan eyes_surprised_confused mouth_frown at move_pos(0.7, 0.2)
     gerald mouth_smile_open "Hehehe... {w}Thanks for the compliment nerd. "
     show Gerald eyes_open
@@ -283,7 +291,7 @@ label gerald_coming:
     dan eyes_happy "Oh absolutely! {w}I can come to your flat every single day if you want.~"
     gerald eyes_happy mouth_smile "Hahahah...~ Fair.~ "
 
-    gerald eyes_open_confused mouth_smile "Hey! I know you're busy right now but, {w}may I join what are you doing right now buddy? {w} I wanna be close with you again.~"
+    gerald eyes_open_confused mouth_smile "Hey! I know you're busy right now but, {w}may I join what are you doing right now buddy? {w}I wanna be close with you again.~"
     dan eyes_happy "Sure thing man! {w}In fact... {w}I need some sort of {bt=3}\"accompany\"{/bt}"
     show Dan mouth_smile
     gerald eyes_happy mouth_smile_open "Hehehe... {w}Very well {bt=3}nerdy boi.~{/bt}"
