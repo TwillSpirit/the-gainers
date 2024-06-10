@@ -1,3 +1,5 @@
+# Place to define custom colors
+
 define color.white = "#ffffff"
 define color.black = "#000000"
 
