@@ -8,11 +8,11 @@ label chapter_two:
   window show
   $ should_show_side_image = True
   
-  gerald covered eyes_open_confused mouth_open "Say...{w} Are you still doing this shitty coding project thing nerd?"
+  gerald covered eyes_open_confused mouth_smile_open "Say...{w} Are you still doing this shitty coding project thing nerd?"
   
   dan covered eyes_close_confused mouth_frown_open "Oh shut up.{w} This is the only job which I'm good at it. {w}Besides, {w}I need to earn money so I don't become homeless and starving."
   
-  gerald eyes_close_confused "Dang, {w} chill out nerdy boi.~ {w}I was joking around with you."
+  gerald eyes_close_confused "Dang, {w}chill out nerdy boi.~ {w}I was joking around with you."
   
   window hide
   pause 2.0
@@ -163,7 +163,7 @@ label chapter_two:
     
   dan "{i}gasp!{/i} {w}You still wanna do that?!"
   
-  gerald "I just miss our good quality time nerd boi.{w} So... {w} {bt=2}wanna come and join...~{/bt}"
+  gerald "I just miss our good quality time nerd boi.{w} So... {w}{bt=2}wanna come and join...~{/bt}"
   
   show Dan eyes_happy_angry mouth_smile_open:
     xpos 0.35
@@ -277,7 +277,7 @@ label chapter_two:
     xpos 0.35
     bounce
 
-  dan "WAIT! {w}I'M NOT READY YET!!!"
+  dan mouth_wide "WAIT! {w}I'M NOT READY YET!!!"
 
   show Gerald eyes_open_confused
 
@@ -290,17 +290,21 @@ label chapter_two:
     xpos 0.35
   with easeinleft
 
-  dan mouth_smile "There we go..."
+  dan mouth_smile "Th- {w=0.5}There we go..."
+
+  show Dan:
+    shaking(0.35)
 
   dan eyes_surprised_confused "{i}Oh fuck...{w}\nI forgot that he's so fucking jacked now.{w}\nBack then he's still normal and I have no problem with it...{w}\nWhy did I sign up for this crap...?{w}\nI can't rollback the time now...{/i}"
 
-  gerald eyes_open_confused mouth_smile_open "You okay nerd?"
+  gerald eyes_open_confused mouth_smile_open "You okay nerd? {w}You're shaking..."
 
   show Gerald mouth_smile
 
   show Dan eyes_surprised_confused mouth_smile_open:
     xpos 0.35
     bounce
+    shaking(0.35)
 
   dan "Ah..!{w} Yes..!{w} I'm okay.. {w}I'm alright.. {w}I'm fine.."
 
@@ -316,11 +320,11 @@ label chapter_two:
     bounce
   extend "NO NO NO NO... I DON-{nw}"
 
-  gerald eyes_close_confused mouth_smile_open "Come on..~ {w}You can't lie to your bestie y'know.~ {w} That's rude"
+  gerald eyes_close_confused mouth_smile_open "Come on..~ {w}You can't lie to your bestie y'know.~ {w}That's rude"
 
   dan mouth_frown "{i}Hngggg...{/i}"
   
-  dan eyes_close_angry mouth_frown_open "FINE!!! {w}CAN I TOUCH IT? "
+  dan eyes_close_angry mouth_wide "FINE!!! {w}CAN I TOUCH YOU'RE ENORMOUS BODY? "
 
   show Dan eyes_open_angry
 
@@ -354,11 +358,11 @@ label chapter_two:
 
   gerald "Eyup! {w}It stands for Man Boobs"
 
-  dan eyes_surprised "WHAT THE FUCK?!!"
+  dan eyes_surprised mouth_wide "WHAT THE FUCK?!!"
 
   gerald eyes_close_confused "I know it's weird right? {w}but the internet just {i}interneting{/i}."
 
-  dan "Tell me about more muscle part!"
+  dan mouth_frown_open "Tell me about more muscle part!"
 
   gerald mouth_smile_open "Whoa...~ {w}Someone is interested eh?~"
 
@@ -396,15 +400,19 @@ label chapter_two:
 
   dan eyes_surprised mouth_frown_open "WHAT?"
 
-  gerald eyes_happy mouth_smile "Mhm!"
+  gerald eyes_happy mouth_smile "Mhm! {w}You're favourite classic fried rice with a lot of eggs ~"
 
   dan eyes_happy_confused mouth_smile_open "Man I feel so honoured to get all of that from you..."
 
   gerald eyes_happy mouth_smile_open "Oh don't be like that nerd!"
 
-  gerald eyes_open "Shall we eat now?"
+  gerald eyes_open "Shall we eat now? {w}We can do story exchange as well like the old days ~"
 
   dan eyes_happy mouth_smile_open "Absolutely! I'm ready to bloated myself~"
+
+  gerald eyes_happy_confused "Wow... {w}You never changed [persistent.char_name] ~"
+
+  gerald eyes_happy "Alright! {w}Come over here nerd ~"
 
   scene black
   with Fade(1.0, 0.0, 1.0)
