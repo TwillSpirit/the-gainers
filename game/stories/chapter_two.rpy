@@ -381,16 +381,20 @@ label chapter_two:
 
   dan eyes_happy mouth_smile_open "Absolutely! I'm so ready to get myself bloated~"
 
-  gerald eyes_happy_confused "Wow... {w}You never change, huh~"
+  gerald eyes_happy_confused "Wow... {w}Calm down ~"
   gerald eyes_happy "Alright! {w}Come here nerd ~"
+
+  window hide
 
   hide Gerald
   hide Dan
-  scene narator_screen('Dan could\'t resist his appetite as soon as he sees the foods') # New Line
+  show screen narator_screen('Dan could\'t resist his appetite as soon as he sees the foods', mode="dark", background_color="#000000") # New Line
   with Fade(1.0, 0.0, 1.0)
-
-  pause 1.0
-
+  pause 3.0
+  scene black
+  hide screen narator_screen
+  with Fade(1.0, 0.0, 1.0)
+  
   # Start New Line
 
   gerald "WAIT!{w} THAT'S A LOT!!!"
@@ -429,6 +433,8 @@ label chapter_two:
   show bg night_talk
   with Fade(1.0, 0.0, 1.0)
 
+  pause 1.0
+
   dan "Hey Gerald, {w}sorry for making you worry about me."
 
   gerald "It's okay! {w}I'm just {w=0.5}not used to see you like this."
@@ -462,7 +468,7 @@ label chapter_two:
     "Do a story trade":
       jump story_trade
     "Keep your story secret":
-      #block of code to run
+      pass
     
 
   "More dialouges will be add very soon! Just cope with what we have here right now :3"
@@ -491,4 +497,32 @@ label story_trade:
   gerald "Hundred percent is real dude!"
   gerald "Even when I put it off the ring, {w}my body size just remain like this"
 
-  
+  dan "Sounds like a black magic"
+
+  gerald "I know right?!"
+  gerald "I still have the ring if you want to use it!"
+
+  dan "What! No!"
+
+  gerald "Why?"
+
+  dan "You said it was a painful process, {w}and you know I hate if the word pain is included."
+
+  gerald "Awh.. okay okay"
+  gerald "I mean fair tho,{w} right now you have the big belly, {w}it just could make it even worse."
+
+  dan "There you go! You know it ~"
+
+  pause 2.0
+
+  dan "{i}*yawn*{/i}{w} I'm sorry Gerald, but your nerd boi is quite sleepy..."
+
+  gerald "Oh? {w}Alright! {w}It's a bit late for you yeah?"
+
+  dan "Mhm"
+
+  gerald "Rest in my bed nerd, I can sleep on the couch over there. {w}Don't you worry about me okay?"
+
+  dan "Bro... {w}Thanks for all of you did"
+
+  gerald "Anything for bestie"

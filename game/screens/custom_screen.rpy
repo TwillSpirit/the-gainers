@@ -9,6 +9,9 @@ style splash_screen_text:
   font "fonts/NovaFlat-Book.ttf"
   size 33
 
+style splash_screen_text_light is splash_screen_text
+style splash_screen_text_dark is splash_screen_text
+
 style splash_screen_text_light:
   color color.black
 
@@ -50,7 +53,7 @@ screen narator_screen(text="Lorem ipsum dolor sit amet", background_color="#ffff
 
     vbox:
       style "splash_screen_vbox"
-      text "[text]" style "splash_screen_text_[mode]"
+      text "[text]" style f"splash_screen_text_{mode}"
       
 
 
