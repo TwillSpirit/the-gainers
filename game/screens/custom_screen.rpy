@@ -6,9 +6,14 @@ style splash_screen_vbox:
 style splash_screen_text:
   xalign 0.5
   xfill True
-  color color.black
   font "fonts/NovaFlat-Book.ttf"
   size 33
+
+style splash_screen_text_light:
+  color color.black
+
+style splash_screen_text_dark:
+  color color.white
 
 style splash_screen_title is splash_screen_text
 style splash_screen_subtitle is splash_screen_text
@@ -35,17 +40,17 @@ screen splash_screen(title="Title", subtitle="subtitle"):
       text "[subtitle]" style "splash_screen_subtitle"
 
 
-screen narator_screen(text="Lorem ipsum dolor sit amet"):
+screen narator_screen(text="Lorem ipsum dolor sit amet", background_color="#ffffffcc", mode="light"):
   frame:
     xalign 0.5
     yalign 0.5
     xfill True
     yfill True
-    background "#ffffffcc"
+    background background_color
 
     vbox:
       style "splash_screen_vbox"
-      text "[text]" style "splash_screen_text"
+      text "[text]" style "splash_screen_text_[mode]"
       
 
 
