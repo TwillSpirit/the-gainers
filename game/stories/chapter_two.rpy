@@ -374,7 +374,7 @@ label chapter_two:
   gerald "Nah, {w=0.5}I need to feed my bestie because I know you can eat a lot ~\n{w}Because I heard from other folks that you can eat entire turkey alone!\n{w}So I wanna see how do you handle it ~"
   ### End New Line
 
-  dan eyes_happy_confused mouth_smile_open "Man I feel so honored to get all of that from you... {w}I don't think I deserve this"
+  dan eyes_happy_confused mouth_smile_open "Man I feel so honored to get all of that from you... {w}I don't think I deserve this."
 
   gerald eyes_happy mouth_smile_open "Oh don't be like that, nerd boy!"
   gerald eyes_open "Shall we eat now? {w}We can do a story trade as well like the old days ~"
@@ -388,7 +388,7 @@ label chapter_two:
 
   hide Gerald
   hide Dan
-  show screen narator_screen('Dan could\'t resist his appetite as soon as he sees the foods', mode="dark", background_color="#000000") # New Line
+  show screen narator_screen('Dan couldn\'t resist his appetite as soon as he saw the food', mode="dark", background_color="#000000") # New Line
   with Fade(1.0, 0.0, 1.0)
   pause 3.0
   scene black
@@ -397,55 +397,55 @@ label chapter_two:
   
   # Start New Line
 
-  gerald "WAIT!{w} THAT'S A LOT!!!"
+  gerald "WAIT!{w} THAT'S TOO MUCH FOR YOU!!!"
 
   dan "I can handle it ~\n{w}Don't you worry ~"
 
   scene bg dinner
   with Fade(1.0, 0.0, 1.0)
 
-  gerald "HOLY SHIT!!!{w} YOU POLISHED IT OFF!!!"
+  gerald "HOLY SHIT!!!{w} YOU LEFT IT CLEAN!!!{w} IT EVEN LOOKS FRESH OUT OF THE DISHWASHER"
 
   dan "Heh ~\n{bt=2}This is nothing ~{/bt}"
 
   gerald "Dude... {w=0.5} YOUR BELLY! {w}IT'S FUCKING HUGE!"
 
   dan "{bt=2}Hehehe ~{/bt}"
-  dan "You have never see me like this, haven't you?~"
+  dan "You have never seen me like this, haven't you?~"
 
-  gerald "I know you can eat a lot... {w}BUT I DIDN'T KNOW YOU COULD EAT THIS A LOT ANF WOULD BECOME LIKE THIS"
+  gerald "I know you can eat a lot... {w}BUT I DIDN'T KNOW YOU COULD EAT THIS MUCH AND BECOME LIKE THIS!!"
 
   dan "{bt=2}Heh ~{/bt}"
 
   gerald "[persistent.char_name]... {w} I'm geniunely worried right now... {w}Are you okay... ?"
 
-  dan "Yeah I'm fine ~\n{w}It was a delicious meal I ever had in months ~\n{w}The fact that it was made by you make it more special ~"
+  dan "Yeah I'm fine ~\n{w}It was the most delicious meal I've ever had in months ~\n{w}The fact that it was made by you made it even more special ~"
 
   gerald "Uhmm... {w=0.5}Thanks for the compliment nerd, but... {w}are you really okay...?"
 
   dan "I'm okay Gerald, don't worry ~\n{w}I will not explode I promise ~"
-  dan "But I might need your help because my legs couldn't hold my weight haha ~"
+  dan "But I might need your help because my legs couldn't hold my weight, haha ~"
 
   gerald "Sure sure! {w}Anything that makes you comfortable!"
 
-  dan "{i}For the first time I saw his face really worried about me.\n{w}Maybe I did it way too much.\n{w}But, he really cares about me.{/i}"
+  dan "{i}For the first time I saw in his eyes that he was really worried about me.\n{w}Maybe I overdid it way too much.,,\n{w}But, it shows that he really cares about me.{/i}"
 
   show bg night_talk
   with Fade(1.0, 0.0, 1.0)
 
   pause 1.0
 
-  dan "Hey Gerald, {w}sorry for making you worry about me."
+  dan "Hey Gerald, {w}sorry for worrying you so much."
 
-  gerald "It's okay! {w}I'm just {w=0.5}not used to see you like this."
+  gerald "It's okay! {w}I'm just... {w=0.5}not used to see you like that."
 
   dan "Yeah I shouldn't do it that much, {w}But I got carried away because it was so good ~"
 
   gerald "Well... {w}I'm glad you like it nerd ~"
 
-  dan "Yeah... ~\n{w}{i}*burp*{/i} Oh, I'm so sorry."
+  dan "Yeah... ~\n{w}{i}*burp*{/i} Oh- s-sorry..."
 
-  gerald "Don't think about it! {w}It's a normal reaction come on."
+  gerald "Don't apologize! {w}It's a normal reaction, man."
 
   dan "Hehe, fine fine ~"
 
@@ -458,7 +458,7 @@ label chapter_two:
   
   dan "Yeah?"
 
-  gerald "Wanna do story trade?"
+  gerald "Wanna do the story trade?"
 
   dan "Uh..."
 
@@ -471,33 +471,33 @@ label chapter_two:
       pass
     
 
-  "More dialouges will be add very soon! Just cope with what we have here right now :3"
+  "More dialouges will be added very soon! Just cope with what we have here right now :3"
 
   scene black
   with Dissolve(1.0)
   return
 
 label story_trade:
-  dan "Sure Gerald! {w}Let's hear your first ~"
+  dan "Sure Gerald! {w}Let's hear yours first ~"
 
-  gerald "Okay! {w}So... I bet you still wonder do I got this muscles really fast."
+  gerald "Okay! {w}So... I bet you're still wondering do I got these muscles so fast."
 
-  dan "I do actually"
+  dan "I do, actually"
 
   gerald "Okay, {w}I'm gonna tell you now because I can't shut my mouth about this anymore"
   gerald "So in the radio, {w}I heard about a ring that can make you stronger, bigger, and muscular"
-  gerald "At first I didn't believe it, {w}because it sounds like a scam. {w}But I'm really curious so I bought one. {w}It was cheap tho, {w}just cost 5 dollars."
-  gerald "Anf then I went to my house over there. {w}As soon as I put the ring on my finger, {w}I felt the big energy just rushing into my blood. {w}My heart beat so fast"
-  gerald "It was a bit painful, {w}but I can clearly see my muscles start growing bigger {w=0.5}and bigger"
-  gerald "and when it stopped, {w}I felt really exhausted and basically faint"
-  gerald "and when I woke up, {w}I've turned into a muscle beast like you witnessing right now"
+  gerald "At first I didn't believe it, {w}because it sounds like a scam. {w}But I was really curious so I bought one. {w}It was quite cheap actually, {w}just 5 dollars worth."
+  gerald "Then I went straight back to my house. {w}As soon as I put the ring on my finger, {w}I felt a massive amount of energy rushing into my blood. {w}My heart was beating so fast!"
+  gerald "It was a bit painful, {w}but I can clearly see my muscles start growing bigger {w=0.5}and bigger..."
+  gerald "When it stopped, {w}I felt extremely exhausted and fainted."
+  gerald "But once I woke up, {w}I noticed that I had turned into the muscle beast you're looking at right now~."
 
-  dan "Wait- {w}So you're telling me that ring thing is real?!"
+  dan "Wait- {w}So you're telling me that the ring thing is real?!"
 
-  gerald "Hundred percent is real dude!"
-  gerald "Even when I put it off the ring, {w}my body size just remain like this"
+  gerald "100% real no cap, dude!"
+  gerald "Even when I take off the ring, {w}my body's size still remains like this"
 
-  dan "Sounds like a black magic"
+  dan "Sounds like a black magic..."
 
   gerald "I know right?!"
   gerald "I still have the ring if you want to use it!"
@@ -506,12 +506,12 @@ label story_trade:
 
   gerald "Why?"
 
-  dan "You said it was a painful process, {w}and you know I hate if the word pain is included."
+  dan "You said it was a painful process, {w}and you know it's a no-no for me if the word 'pain' is included."
 
   gerald "Awh.. okay okay"
-  gerald "I mean fair tho,{w} right now you have the big belly, {w}it just could make it even worse."
+  gerald "I mean, fair.{w} Right now you have the big belly, {w}it just could make it even worse."
 
-  dan "There you go! You know it ~"
+  dan "That... is also a reason, hehe ~"
 
   pause 2.0
 
@@ -521,8 +521,8 @@ label story_trade:
 
   dan "Mhm"
 
-  gerald "Rest in my bed nerd, I can sleep on the couch over there. {w}Don't you worry about me okay?"
+  gerald "You can rest in my bed, nerd, I can just sleep on the couch over there. {w}Don't you worry about me okay?"
 
-  dan "Bro... {w}Thanks for all of you did"
+  dan "Bro... {w}Thank you for everything you've done for me"
 
-  gerald "Anything for bestie"
+  gerald "Anything for bestie ~"
