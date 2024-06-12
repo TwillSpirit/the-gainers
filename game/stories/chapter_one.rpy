@@ -147,7 +147,7 @@ label chapter_one:
 
     $ should_show_side_image = True
     dan covered mouth_smile_open "Alright! "
-    dan "My laptop's ready, {w}my coffee's locked a loaded! "
+    dan "My laptop's ready, {w}my coffee's locked and loaded! "
     dan eyes_happy_angry "Let's do this!"
 
     window hide
@@ -167,7 +167,7 @@ label chapter_one:
     $ should_show_side_image = True
     dan covered eyes_open_confused mouth_frown "Hmmm....? {w}An unknown number?"
     dan "I feel reluctant to answer this..."
-    dan "{i}What should I do{/i}"
+    dan "{i}What should I do?{/i}"
 
     menu:
         "Answer the phone":
@@ -226,7 +226,7 @@ label gerald_coming:
     
     dan "AAAAAA--!!!"
     "???" "{bt=3}Guess who this is...?~{/bt}"
-    dan "GET OFF YOUR HANDS OFF OF MY FACE!!!"
+    dan "GET YOUR HANDS OFF OF MY FACE!!!"
     "???" "{bt=3}Nope, {w}I will let my hands off whenever I want, tech nerd~{/bt}"
     dan "{i}Shit... {w}Who the fuck is this guy...{/i}\n{w}{sc=2}{i}Damnit... {w} I'm so scared...{/i}{/sc}"
     # dan "{i}Wait a minute... {w}That voice... {w}it sounds like the guy on the phone earlier{/i}"

@@ -238,7 +238,7 @@ label chapter_two:
 
   gerald eyes_happy mouth_smile_open "Hey hey~\n{w}Like what you see?~"
 
-  dan "So this is what you looks like... {w}without the clothes...?"
+  dan "So this is what you look like... {w}without the clothes...?"
   dan "Dude... {w}{sc=3}YOU'RE A FUCKING BEAST!!!{/sc}"
 
   gerald eyes_close "I am indeed ~"
@@ -476,11 +476,11 @@ label chapter_two:
       jump gerald_story
     "Keep your story secret":
       $ story_trade = False
-      dan "Well Gerald, {w}I'd like to keep my story private"
+      dan "Well Gerald, {w}I'd like to keep my story private."
 
       gerald "Awh... {w}Why?"
 
-      dan "I just like to keep it by myself, {w}I just not very comfortable to share how do I do, how was life, or this or that."
+      dan "I just like to keep it by myself, {w}I just not very comfortable with sharing what I do now, how was life, or this or that."
       dan "But that doesn't mean you can't tell your story! {w}You can tell me your story! {w}I'm all ears for you."
       jump gerald_story
 
@@ -493,14 +493,14 @@ label gerald_story:
   gerald "So in the radio, {w}I heard about a ring that can make you stronger, bigger, and muscular"
   gerald eyes_open_confused "At first I didn't believe it, {w}because it sounds like a scam. {w}But I was really curious so I bought one. {w}It was quite cheap actually, {w}just 5 dollars worth."
   gerald "Then I went straight back to my house. {w}As soon as I put the ring on my finger, {w}I felt a massive amount of energy rushing into my blood. {w}My heart was beating so fast!"
-  gerald eyes_open "It was a bit painful, {w}but I can clearly see my muscles start growing bigger {w=0.5}and bigger..."
+  gerald eyes_open "It was a bit painful, {w}but I could clearly see my muscles starting to grow bigger {w=0.5}and bigger..."
   gerald "When it stopped, {w}I felt extremely exhausted and fainted."
   gerald "But once I woke up, {w}I noticed that I had turned into the muscle beast you're looking at right now~."
 
   dan eyes_surprised mouth_frown_open "Wait- {w}So you're telling me that the ring thing is real?!"
 
   gerald "100\% real no cap, dude!"
-  gerald "Even when I take off the ring, {w}my body's size still remains like this"
+  gerald "Even when I take off the ring, {w}my body's size still remains like this."
 
   dan "Sounds like a black magic..."
 
@@ -511,33 +511,33 @@ label gerald_story:
 
   menu:
     "Put the ring":
-      dan eyes_open mouth_frown_open "Let me try that ring"
+      dan eyes_open mouth_frown_open "Hmm... Let me try it on then"
 
-      gerald eyes_open mouth_frown_open "Oh you want it?"
+      gerald eyes_open mouth_frown_open "Oh, you want it?"
 
       dan eyes_lazy mouth_smile_open "You would like to see your bestie become a beast, wouldn't you?~"
 
-      gerald "YES I WANT MY BESTIE TO BE LIKE ME!!"
+      gerald "YES! I WANT MY BESTIE TO BE LIKE ME!!"
 
       dan eyes_close "Hehehe ~"
       dan "Hand me the ring then ~"
 
-      gerald "Here you go bestie!"
+      gerald "Here you go, bestie!"
 
       $ should_show_side_image = False
 
-      "{i}He put the ring into my finger.\n{w}It felt sureal that he did it by himself.\n{w}But I do really curious about this ring.{/i}"
-      "{i}But after he put it, I didn't the energy flows through my body like he said{/i}"
+      "{i}Gerald put the ring into my finger.\n{w}The fact that he was doing this felt surreal...\n{w}But I'm really curious about this ring.{/i}"
+      "{i}Right after he put it in, I didn't feel that... massive energy flow in my body like the one he described.{w} In fact, I didn't really feel anything at all.{/i}"
 
       $ should_show_side_image = True
 
-      dan eyes_open_confused mouth_frown "Hmmm... {w}I didn't feel anything Gerald"
+      dan eyes_open_confused mouth_frown "Hmmm... {w}I don't feel anything Gerald."
 
-      gerald eyes_open_confused "Huh? {w}It's weird... {w}I immediately felt it as soon as I wore it."
+      gerald eyes_open_confused "Huh? {w}That's weird... {w}I immediately felt it as soon as I put it on."
 
-      dan "Maybe all the magic had had flowed through your body. {w}That's why I didn't feel any of it."
+      dan "Maybe all the magic has been drained by your body, leaving it empty. {w}That's probably why I didn't feel anything."
 
-      gerald "That would make sense. {w}But that would be lame..."
+      gerald "That would make sense... {w}But that would be lame..."
       gerald eyes_close_confused mouth_frown "Sucks that I couldn't see you growing..."
 
       dan eyes_close_confused mouth_smile_open "Hey hey! {w}It's not your fault okay? {w}We're just not lucky at this time."
@@ -559,7 +559,7 @@ label gerald_story:
       gerald eyes_open_confused mouth_frown_open "Awh.. okay okay"
       gerald mouth_smile_open "I mean, fair.{w} Right now you have the big belly, {w}it just could make it even worse."
 
-      dan eyes_happy mouth_smile "That... is also a reason, hehe ~"
+      dan eyes_happy mouth_smile "That... is also a reason, hehe. ~"
       pass
 
   pause 2.0
@@ -569,14 +569,14 @@ label gerald_story:
 
   gerald eyes_open mouth_frown_open "Oh? {w}Alright! {w}It's a bit late for you yeah?"
 
-  dan "Mhm"
+  dan "Mhm."
 
   gerald "You can rest in my bed, nerd, I can just sleep on the couch over there. {w}Don't you worry about me okay?"
 
-  dan "Bro... {w}Thank you for everything you've done for me"
+  dan "Bro... {w}Thank you for everything you've done for me."
 
-  gerald eyes_close mouth_smile "Anything for bestie ~"
-  gerald eyes_open "Now sleep well bestie ~"
+  gerald eyes_close mouth_smile "Anything for bestie. ~"
+  gerald eyes_open "Now sleep well bestie. ~"
 
   dan "I will..."
 
@@ -591,7 +591,7 @@ label gerald_story:
   scene black
   with Fade(1.0, 0.0, 1.0)
 
-  "More dialouges will be added very soon! Just cope with what we have here right now :3"
+  "More dialogues will be added very soon! Just cope with what we have here right now :3"
 
   scene black
   with Fade(1.0, 0.0, 1.0)
