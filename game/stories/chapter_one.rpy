@@ -30,7 +30,7 @@ label chapter_one:
     show Dan:
         flip
 
-    play music cinematic_suspense
+    play music cinematic_suspense volume 0.5
 
     dan "..."
     dan eyes_close_confused "The flat feels empty without {b}him{/b}."
@@ -242,7 +242,7 @@ label gerald_coming:
 
     gerald eyes_happy mouth_smile_open "Surprise, tech nerd! {w}It's been a long time huh?~"
 
-    play music cinematic_suspense
+    play music cinematic_suspense volume 0.5
     
     show Gerald at move_pos(0.3, 0.5)
     show Dan covered eyes_surprised:
