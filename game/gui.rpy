@@ -50,7 +50,7 @@ define gui.muted_color = '#666666'
 define gui.hover_muted_color = '#999999'
 
 ## The colors used for dialogue and menu choice text.
-define gui.text_color = '#404040'
+define gui.text_color = '#ffffff' # before was #404040 
 define gui.interface_text_color = '#404040'
 
 
@@ -66,7 +66,7 @@ define gui.name_text_font = "fonts/OpenSans-Bold.ttf"
 define gui.interface_text_font = "fonts/OpenSans-Medium.ttf"
 
 ## The size of normal dialogue text.
-define gui.text_size = 28
+define gui.text_size = 30
 
 ## The size of character names.
 define gui.name_text_size = 36
@@ -131,7 +131,7 @@ define gui.namebox_tile = False
 ## number of pixels relative to the left or top side of the textbox, or 0.5 to
 ## center.
 define gui.dialogue_xpos = 402
-define gui.dialogue_ypos = 75
+define gui.dialogue_ypos = 0
 
 ## The maximum width of dialogue text, in pixels.
 define gui.dialogue_width = 1116

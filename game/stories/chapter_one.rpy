@@ -305,17 +305,19 @@ label gerald_coming:
     hide Gerald
     with easeoutright
 
-    show screen simple_splash_screen("END OF CHAPTER I")
-    stop music fadeout 1.0
-    $ quick_menu = False
-    with Fade(0.5, 1.0, 0.5, color="#fff")
-    pause(5.0)
+    # show screen simple_splash_screen("END OF CHAPTER I")
+    # stop music fadeout 1.0
+    # $ quick_menu = False
+    # with Fade(0.5, 1.0, 0.5, color="#fff")
+    # pause(5.0)
     $ persistent.chapter_one_complete = True
-    hide screen simple_splash_screen
+    # hide screen simple_splash_screen
 
     show screen splash_screen("CHAPTER 2", "WHERE IT ALL STARTED")
-    with Fade(0.5,1.0,0.5,color=color.white)
-    pause(2.0)
+    stop music fadeout 1.0
+    $ quick_menu = False
+    with Fade(1.0,0.0,1.0,color=color.white)
+    pause(3.0)
     jump chapter_two
 
     return

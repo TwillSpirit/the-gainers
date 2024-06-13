@@ -279,13 +279,18 @@ label chapter_two:
     shaking(0.35)
 
   dan "Ah..!{w} Yes..!{w} I'm okay.. {w}I'm alright.. {w}I'm fine... It's all good..."
+  dan "{i}Shit [persistent.char_name], {w}why am I shaking...?{/i}"
+  dan "{i}What is this feeling...?{/i}"
+  
 
   gerald mouth_smile_open "Oh [persistent.char_name]...~\n{w}I know what you're thinking right now...~{w}\nYou wanna test and see if this real or not, right...?~"
+
 
   show Dan eyes_surprised_confused mouth_frown_open:
     xpos 0.35
     bounce
   
+  dan "{i}Wait he can read my mind as well?!{/i}"
   dan "WHAT?! "
   show Dan:
     xpos 0.35
@@ -309,6 +314,13 @@ label chapter_two:
   with Dissolve(1.0)
 
   pause 1.0
+
+  dan "{i}He allowed me to feel his muscles...{/i}"  
+  dan "{i}Gerald... {w}why would you let me to do this...?{/i}"  
+  dan "{i}You should cut me off from the beginning damn it...{/i}"  
+  dan "{i}Now I have to feel it...{/i}"  
+  dan "{i}I don't want to do this, but my curiosity is over the line...{/i}"  
+  
   $ should_show_side_image = True
 
   window show
@@ -333,18 +345,35 @@ label chapter_two:
   gerald eyes_close_confused "I know it's weird right? {w}The internet is quite... {i}'internetsting'{/i}."
 
   dan mouth_frown_open "Tell me more about muscles!"
+  dan eyes_surprised_confused "{i}\"Wait! {w}Why did I say that spontaneously?!\"{/i}"
+  dan eyes_surprised_confused "{i}\"What's wrong with me...?!\"{/i}"
 
   gerald mouth_smile_open "Whoa...~ {w}Someone is interested eh?~"
 
-  dan eyes_close_angry "Just fucking tell me already!"
+  dan eyes_close_angry mouth_frown "{i}I grint because he keeps teasing me{/i}"
+  dan eyes_close_angry mouth_wide "Just fucking tell me already!"
 
   gerald mouth_smile_open "Geez...~ {w}Chill out~"
   gerald eyes_open "Alright so...~"
-  gerald "The ones you're touching are called pectorals or pecs for short ~\n{w}The shoulders are called Deltoids ~\n{w}You've got the classic abs right below the pecs ~\n{w}The muscles that look like wings between my back and front are called Lats ~\n{w}The one that connected between my abs and lats are called obliques\n{w}Aaand on my upper arms you have the classic biceps and triceps ~"
+  gerald "The ones you're touching are called pectorals or pecs for short ~"
+  gerald "The shoulders are called Deltoids ~"
+  gerald "You've got the classic abs right below the pecs ~"
+  gerald "The muscles that look like wings between my back and front are called Lats ~"
+  gerald "The one that connected between my abs and lats are called obliques ~"
+  gerald "and on my upper arms you have the classic biceps and triceps ~"
 
   dan eyes_surprised "Whoa... {w}That's a lot of muscles."
 
   gerald eyes_happy "Definitely ~"
+
+  $ should_show_side_image = False
+
+  dan "{i}I keep getting more curious about muscles eventually, and Gerald willingly to share some info about it{/i}"
+  dan "{i}I went from the top muscles to the bottom part, and Gerald doesn't seems to be bother at all.{/i}"
+  dan "{i}It went for minutes...{/i}"
+  dan "{i}He even flexes his muscles right in front of my eyes.{/i}"
+  dan "{i}And I just stand still while amazed to his physiques.{/i}"
+  dan "{i}He just...{w} amazing... ~{/i}"
 
   scene bg gerald_room_night
   show Dan eyes_open mouth_smile:
@@ -448,11 +477,51 @@ label chapter_two:
 
   gerald eyes_happy_confused mouth_smile_open "Well... {w}I'm glad you like it nerd ~"
 
-  dan mouth_smile_open "Yeah... ~\n{w}{i}*burp*{/i} Oh- s-sorry..."
+  dan "{i}\"He doesn't know that I'm into this\"{/i}"
+  dan "{i}\"But to be fair, {w}it was a good meal ~\"{/i}"
+
+  dan mouth_smile_open "Yeah... ~\n{w}"
+  dan mouth_wide "{i}*burp*{/i}"
+  dan mouth_smile_open "Oh- s-sorry..."
 
   gerald "Don't apologize! {w}It's a normal reaction, man."
 
-  dan "Hehe, fine fine ~"
+  dan mouth_smile "Hehe, fine fine ~"
+
+  $ should_show_side_image = False
+  dan "{i}I rubbed my big belly gently ~{/i}"
+  dan "{i}and I saw Gerald looking at me while rubbing my belly{/i}"
+  dan "{i}Perhaps I should ask him what's he thinking right now{/i}"
+  $ should_show_side_image = True
+
+  dan eyes_open_confused mouth_smile "Are you okay Gerald?"
+  gerald eyes_open_confused mouth_frown_open "Oh!{w} Yeah...!"
+  dan eyes_open_confused mouth_smile "Gerald...?"
+  gerald "I'm sorry [persistent.char_name]{w} but I really wanna ask you something?"
+  dan mouth_smile_open "What is it?"
+  gerald "Can I... {w}feel it as well?"
+  
+  dan eyes_surprised mouth_frown "{i}I'm in shocked that those words are really comes out from his mouth{/i}"
+  dan "{i}Is he also into this?{/i}"
+  dan "{i}Or is he just curious?{/i}"
+  dan "{i}Whatever is the choices, {w}I let him to feel it{/i}"
+
+  dan eyes_happy_confused mouth_smile_open "Oh... sure Gerald!"
+  dan "Just make sure to be gentle, okay?"
+
+  gerald eyes_open "Don't worry, I got you!"
+
+  $ should_show_side_image = False
+  dan "{i}He is really rubbing his big paws over my belly{/i}"
+  dan "{i}It's so soft and my belly seems happy about it{/i}"
+  $ should_show_side_image = True
+
+  gerald "Oh wow, your belly is rock solid!"
+  dan "Haha... yeah"
+  gerald "And you don't feel any pain at all"
+  dan "Nope"
+  gerald eyes_open_confused "How come?"
+  dan "I'm already used to it Gerald"
 
   window hide
   pause 2.0
@@ -461,7 +530,7 @@ label chapter_two:
   gerald eyes_open mouth_frown "..."
   gerald mouth_frown_open "Hey Dan."
   
-  dan eyes_close mouth_frown_open "Yeah?"
+  dan eyes_close mouth_smile_open "Yeah?"
 
   gerald eyes_open_confused mouth_smile_open "Wanna do the story trade?"
 
@@ -481,7 +550,8 @@ label chapter_two:
       gerald "Awh... {w}Why?"
 
       dan "I just like to keep it by myself, {w}I just not very comfortable with sharing what I do now, how was life, or this or that."
-      dan "But that doesn't mean you can't tell your story! {w}You can tell me your story! {w}I'm all ears for you."
+      dan mouth_smile "But that doesn't mean you can't tell your story! {w}You can tell me your story! {w}I'm all ears for you."
+
       jump gerald_story
 
 label gerald_story:
@@ -561,6 +631,23 @@ label gerald_story:
 
       dan eyes_happy mouth_smile "That... is also a reason, hehe. ~"
       pass
+
+  if story_trade:
+    dan eyes_open "Now it's my turn yeah?"
+    gerald eyes_open mouth_smile "Mhm"
+    dan eyes_close_confused "Well Gerald... {w}My story is really boring"
+    dan "It's the same shit everyday and its repeating over and over again"
+    gerald "Ah yes, {w}you being yourself"
+    gerald "Classic nerd boi"
+    dan eyes_happy "You know it!"
+
+    $ should_show_side_image = False
+
+    dan "{i}Eventually I keep telling my story for hours{/i}"
+    dan "{i}even tho it's quite a boring story, {w}Gerald seems enthusiast{/i}"
+    dan "{i}He's the only guy who wants to hear my story from A to Z{/i}"
+    $ should_show_side_image = True
+    pass
 
   pause 2.0
 
