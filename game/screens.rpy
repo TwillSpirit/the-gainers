@@ -141,20 +141,23 @@ style window:
     yalign gui.textbox_yalign
     ysize 275
 
-    background Image("gui/Dialouge Box.png", xalign=0.5, yalign=1.0, yoffset=-50)
+    background Image("gui/Dialouge Box.png", xalign=0.5, yalign=1.0)
 
 style namebox:
     xpos 305
     xanchor 0.0
     xsize 239
-    ypos -120
+    ypos -65
     xfill True
     ysize 64
     # background Frame("gui/namebox.png", gui.namebox_borders, tile=gui.namebox_tile, xalign=gui.name_xalign)
     # padding gui.namebox_borders.padding
 
+# style namebox_label:
+
 style say_label:
     properties gui.text_properties("name", accent=True)
+    outlines [(absolute(2), '#ffffff', absolute(0), absolute(0))]
     xalign 0.5
     yalign 0.5
 
@@ -163,7 +166,7 @@ style say_dialogue:
 
     xpos gui.dialogue_xpos
     xsize gui.dialogue_width
-    ypos -30
+    ypos 0
 
     adjust_spacing False
 
@@ -233,7 +236,10 @@ style choice_button is default:
     properties gui.button_properties("choice_button")
 
 style choice_button_text is default:
-    properties gui.text_properties("choice_button")
+    # properties gui.text_properties("choice_button")
+    xalign 0.5   
+    color '#ffffff'
+    hover_color '#06132D'
 
 
 ## Quick Menu screen ###########################################################

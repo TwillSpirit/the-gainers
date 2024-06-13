@@ -23,10 +23,12 @@ style splash_screen_subtitle is splash_screen_text
 
 style splash_screen_title:
   font "fonts/NovaFlat-Bold.ttf"
+  color color.black
   size 64
 
 style splash_screen_subtitle:
   font "fonts/NovaFlat-Book.ttf"
+  color color.black
   size 128
 
 screen splash_screen(title="Title", subtitle="subtitle"):
@@ -68,16 +70,22 @@ screen simple_splash_screen(text="This is text"):
 
     vbox:
       style "splash_screen_vbox"
-      text "[text]" style "splash_screen_text"
+      text "[text]" style "splash_screen_text_light"
 
 style credit_text:
-  font "fonts/NovaFlat-Book.ttf"
+  color '#000000'
+  font "fonts/OpenSans-Medium.ttf"
 
 style credit_title_text is credit_text
 style credit_button_text is credit_text
 
 style credit_title_text:
   size 33
+
+style link is credit_title_text
+style link:
+  color color.blue.normal
+  hover_color color.blue.dark
 
 style credit_hbox:
   spacing 10
@@ -107,11 +115,11 @@ screen credit():
     vbox:
       text "Music" style "credit_title_text"
 
-      text "Imagefilm 017 by Sascha Ende\nFree download: {a=https://filmmusic.io/song/314-imagefilm-017}Link to download{/a}\n{a=https://filmmusic.io/standard-license}License (CC BY 4.0){/a}\n"
+      text "Imagefilm 017 by Sascha Ende\n{a=https://filmmusic.io/song/314-imagefilm-017, color=#ff0000}{=link}Link to download{/=link}{/a}\n{a=https://filmmusic.io/standard-license}{=link}License (CC BY 4.0){/=link}{/a}\n"
 
-      text "Play A Little Game (DECISION) by Sascha Ende\nFree download: {a=https://filmmusic.io/song/249-play-a-little-game-decision}Link to download{/a}\n{a=https://filmmusic.io/standard-license}License (CC BY 4.0){/a}\n"
+      text "Play A Little Game (DECISION) by Sascha Ende\n{a=https://filmmusic.io/song/249-play-a-little-game-decision}{=link}Link to download{/=link}{/a}\n{a=https://filmmusic.io/standard-license}{=link}License (CC BY 4.0){/=link}{/a}\n"
 
-      text "Cinematic Suspense Series Episode 008 by Sascha Ende\n{a=https://filmmusic.io/song/7669-cinematic-suspense-series-episode-008}Link to download{/a}\n{a=https://filmmusic.io/standard-license}License (CC BY 4.0){/a}"
+      text "Cinematic Suspense Series Episode 008 by Sascha Ende\n{a=https://filmmusic.io/song/7669-cinematic-suspense-series-episode-008}{=link}Link to download{/=link}{/a}\n{a=https://filmmusic.io/standard-license}{=link}License (CC BY 4.0){/=link}\n{/a}"
 
       text "Team" style "credit_title_text"
 
