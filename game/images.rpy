@@ -66,3 +66,5 @@ image bg corridor:
     "scene/bg corridor.png"
 image bg pecs:
     "scene/scene pecs_massage.png"
+image bg dan_shock:
+    "scene/dan_shock.png"

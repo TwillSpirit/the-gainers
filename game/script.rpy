@@ -29,6 +29,8 @@ label start:
                     jump chapter_one
                 "Chapter 2":
                     jump chapter_two
+                "Chapter 3":
+                    jump chapter_three
 
     # While the game is not under development stage anymore this script will be run
     show screen splash_screen("CHAPTER 1", "BEGINNING")

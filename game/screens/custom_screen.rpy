@@ -56,7 +56,23 @@ screen narator_screen(text="Lorem ipsum dolor sit amet", background_color="#ffff
     vbox:
       style "splash_screen_vbox"
       text "[text]" style f"splash_screen_text_{mode}"
-      
+
+
+screen dream_thought_screen(text="text", font_size=48):
+  zorder 998
+  frame:
+    xalign 0.5
+    yalign 0.5
+    xfill True
+    yfill True
+    background '#000000'
+
+    vbox:
+      style "splash_screen_vbox"
+      text "[text]":
+        style "splash_screen_text_dark"
+        size font_size
+  # add Snow('dot-red.png')
 
 
 screen simple_splash_screen(text="This is text"):

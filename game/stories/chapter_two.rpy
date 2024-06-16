@@ -52,7 +52,7 @@ label chapter_two:
   
   gerald eyes_open_confused mouth_frown "Hmm...{w}\nCan I see it?"
   
-  dan eyes_close_confused  "Sure..."
+  dan eyes_lazy_confused look_left  "Sure..."
 
   window hide
   pause 3.0
@@ -102,7 +102,7 @@ label chapter_two:
   window show
 
   dan eyes_close mouth_smile_open "And... done~!"
-  dan eyes_close_confused "Man, that was a whole lot of stuff"
+  dan eyes_lazy_confused look_right "Man, that was a whole lot of stuff"
   
   gerald eyes_open mouth_smile_open "So you're finally finished with this project, right?"
   
@@ -110,7 +110,7 @@ label chapter_two:
   
   gerald eyes_happy "AYYY!!! LET'S GOOO!!"
 
-  dan eyes_open "Oh yeah I forgot!{w} Do you wanna eat something Gerald?"
+  dan eyes_open look_straight "Oh yeah I forgot!{w} Do you wanna eat something Gerald?"
   
   gerald  "No no no it's fine~ {w}I already had something in the way here~"
   
@@ -208,8 +208,8 @@ label chapter_two:
   gerald "In the closet,{w} please wait a sec."
   dan "Ohh okay~"
 
-  dan mouth_smile "{i}Damn, {w}his room is way tidier than mine. {w}Guess the tidy doggo never changes...~{/i}"
-  dan mouth_smile "{i}This room's layout is almost the same as mine. {/i}"
+  dan mouth_smile look_right "{i}Damn, {w}his room is way tidier than mine. {w}Guess the tidy doggo never changes...~{/i}"
+  dan mouth_smile look_left "{i}This room's layout is almost the same as mine. {/i}"
   
   show Dan eyes_happy_confused
   
@@ -480,7 +480,7 @@ label chapter_two:
   dan "{i}\"He doesn't know that I'm into this\"{/i}"
   dan "{i}\"But to be fair, {w}it was a good meal ~\"{/i}"
 
-  dan mouth_smile_open "Yeah... ~\n{w}"
+  dan mouth_smile_open "Yeah... ~"
   dan mouth_wide "{i}*burp*{/i}"
   dan mouth_smile_open "Oh- s-sorry..."
 
@@ -581,6 +581,7 @@ label gerald_story:
 
   menu:
     "Put the ring":
+      $ persistent.put_ring = True
       dan eyes_open look_straight mouth_frown_open "Hmm... Let me try it on then"
 
       gerald eyes_open mouth_frown_open "Oh, you want it?"
@@ -668,19 +669,17 @@ label gerald_story:
 
   dan eyes_happy "I will..."
 
-  show screen simple_splash_screen("END OF CHAPTER II")
-  stop music fadeout 1.0
-  $ quick_menu = False
-  with Fade(2.0, 1.0, 2.0, color="#fff")
-  pause(5.0)
+  # show screen simple_splash_screen("END OF CHAPTER II")
+  # stop music fadeout 1.0
+  # $ quick_menu = False
+  # with Fade(2.0, 1.0, 2.0, color="#fff")
+  # pause(5.0)
   $ persistent.chapter_two_complete = True
 
-  hide screen simple_splash_screen
-  scene black
-  with Fade(1.0, 0.0, 1.0)
-
-  "More dialogues will be added very soon! Just cope with what we have here right now :3"
-
-  scene black
-  with Fade(1.0, 0.0, 1.0)
+  show screen splash_screen("CHAPTER 3", "OH FUCK IT HAPPENS!")
+  stop music fadeout 1.0
+  $ quick_menu = False
+  with Fade(1.0,0.0,1.0,color=color.white)
+  pause(3.0)
+  jump chapter_three
   return

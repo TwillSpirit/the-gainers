@@ -4,3 +4,4 @@
 default persistent.char_name = ""
 default persistent.chapter_one_complete = False
 default persistent.chapter_two_complete = False
+default persistent.put_ring = False
