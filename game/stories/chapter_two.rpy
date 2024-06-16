@@ -60,7 +60,7 @@ label chapter_two:
 
   gerald eyes_open mouth_frown_open "Ah..!\n{w}You forgot to write 'semicolon' in this line!"
   
-  dan eyes_surprised mouth_frown_open "WAIT WHA-?"
+  dan eyes_open look_s_straight mouth_frown_open "WAIT WHA-?"
 
   window hide
   pause 1.0
@@ -68,7 +68,7 @@ label chapter_two:
 
   scene bg dan_gerald_talk with hpunch
   
-  dan covered eyes_surprised_angry mouth_frown_open "OH FOR FUCKS SAKE!!! YOU'RE RIGHT!!"
+  dan covered eyes_open_angry look_s_straight mouth_frown_open "OH FOR FUCKS SAKE!!! YOU'RE RIGHT!!"
   
   gerald covered eyes_open_confused mouth_smile_open "Hey hey hey!{w} Chill out [persistent.char_name]. {w}You're just not careful enough."
   
@@ -93,7 +93,7 @@ label chapter_two:
   gerald eyes_open "Oh I see.~"
   gerald "I can help you with the design if you want!"
   
-  dan eyes_open mouth_frown_open "Oh no no no, {w}It's fine Gerald\n{w}They already gave me the mockup, so now I just need transform it into an actual website."
+  dan eyes_open look_straight mouth_frown_open "Oh no no no, {w}It's fine Gerald\n{w}They already gave me the mockup, so now I just need transform it into an actual website."
   
   gerald "Oh I see I see"
 
@@ -150,7 +150,7 @@ label chapter_two:
   
   extend "For a \"Panties Sleepover\" like we used to do before~."
   
-  show Dan eyes_surprised mouth_frown_open:
+  show Dan eyes_open look_s_straight mouth_frown_open:
     xpos 0.35
     bounce
     
@@ -222,7 +222,7 @@ label chapter_two:
   stop music fadeout 1.0
   pause 1.0
 
-  show Dan eyes_surprised mouth_frown_open:
+  show Dan eyes_open look_s_straight mouth_frown_open:
     xpos 0.35
     bounce
 
@@ -245,7 +245,7 @@ label chapter_two:
 
   show Gerald eyes_open mouth_smile
   
-  show Dan eyes_surprised mouth_frown_open:
+  show Dan eyes_open look_s_straight mouth_frown_open:
     xpos 0.35
     bounce
 
@@ -258,22 +258,22 @@ label chapter_two:
 
   pause 1.0
 
-  show Dan eyes_surprised:
+  show Dan eyes_open_confused look_s_straight:
     xpos 0.35
   with easeinleft
 
-  dan mouth_smile "Th- {w=0.5}There we go..."
+  dan mouth_smile_open "Th- {w=0.5}There we go..."
 
-  show Dan:
+  show Dan mouth_smile:
     shaking(0.35)
 
-  dan eyes_surprised_confused "{i}Oh fuck...{w}\nI forgot that he's fucking jacked now.{w}\nBack then when he was still normal, I had no problem with it, but now...{w}\nMh... Why did I sign up for this crap...?{w}\nI can't turn back time now...{/i}"
+  dan eyes_open_confused "{i}Oh fuck...{w}\nI forgot that he's fucking jacked now.{w}\nBack then when he was still normal, I had no problem with it, but now...{w}\nMh... Why did I sign up for this crap...?{w}\nI can't turn back time now...{/i}"
 
   gerald eyes_open_confused mouth_smile_open "You alright nerd? {w}You're shaking..."
 
   show Gerald mouth_smile
 
-  show Dan eyes_surprised_confused mouth_smile_open:
+  show Dan eyes_open_confused mouth_smile_open:
     xpos 0.35
     bounce
     shaking(0.35)
@@ -286,7 +286,7 @@ label chapter_two:
   gerald mouth_smile_open "Oh [persistent.char_name]...~\n{w}I know what you're thinking right now...~{w}\nYou wanna test and see if this real or not, right...?~"
 
 
-  show Dan eyes_surprised_confused mouth_frown_open:
+  show Dan eyes_open_confused look_s_straight mouth_frown_open:
     xpos 0.35
     bounce
   
@@ -324,11 +324,11 @@ label chapter_two:
   $ should_show_side_image = True
 
   window show
-  dan eyes_surprised mouth_frown "Oh fuck...\n{w}They are so soft yet so firm..."
+  dan eyes_open look_s_straight mouth_frown "Oh fuck...\n{w}They are so soft yet so firm..."
 
   gerald eyes_happy "I know right?"
 
-  dan eyes_surprised_confused mouth_frown_open "What is this muscle called?"
+  dan eyes_open_confused look_s_straight mouth_frown_open "What is this muscle called?"
 
   gerald "They are called pectorals.~"
 
@@ -340,13 +340,13 @@ label chapter_two:
 
   gerald "Eyup! {w}It stands for Man Boobs"
 
-  dan eyes_surprised mouth_wide "THE FUCK?!!"
+  dan eyes_open look_s_straight mouth_wide "THE FUCK?!!"
 
   gerald eyes_close_confused "I know it's weird right? {w}The internet is quite... {i}'internetsting'{/i}."
 
   dan mouth_frown_open "Tell me more about muscles!"
-  dan eyes_surprised_confused "{i}\"Wait! {w}Why did I say that spontaneously?!\"{/i}"
-  dan eyes_surprised_confused "{i}\"What's wrong with me...?!\"{/i}"
+  dan eyes_open_confused look_s_straight "{i}\"Wait! {w}Why did I say that spontaneously?!\"{/i}"
+  dan eyes_open_confused look_s_straight "{i}\"What's wrong with me...?!\"{/i}"
 
   gerald mouth_smile_open "Whoa...~ {w}Someone is interested eh?~"
 
@@ -362,7 +362,7 @@ label chapter_two:
   gerald "The one that connected between my abs and lats are called obliques ~"
   gerald "and on my upper arms you have the classic biceps and triceps ~"
 
-  dan eyes_surprised "Whoa... {w}That's a lot of muscles."
+  dan eyes_open look_s_straight "Whoa... {w}That's a lot of muscles."
 
   gerald eyes_happy "Definitely ~"
 
@@ -395,7 +395,7 @@ label chapter_two:
 
   gerald "Oh right! {w}I have cooked some food for both of us!"
 
-  dan eyes_surprised mouth_frown_open "HUH?"
+  dan eyes_open look_s_straight mouth_frown_open "HUH?"
 
   gerald eyes_happy mouth_smile "Mhm! {w}Your favourite classic fried rice with a lotta eggs, {w}and 2 whole chickens ~"
 
@@ -501,7 +501,7 @@ label chapter_two:
   dan mouth_smile_open "What is it?"
   gerald "Can I... {w}feel it as well?"
   
-  dan eyes_surprised mouth_frown "{i}I'm in shocked that those words are really comes out from his mouth{/i}"
+  dan eyes_open look_s_straight mouth_frown "{i}I'm in shocked that those words are really comes out from his mouth{/i}"
   dan "{i}Is he also into this?{/i}"
   dan "{i}Or is he just curious?{/i}"
   dan "{i}Whatever is the choices, {w}I let him to feel it{/i}"
@@ -534,7 +534,7 @@ label chapter_two:
 
   gerald eyes_open_confused mouth_smile_open "Wanna do the story trade?"
 
-  dan eyes_open_confused mouth_frown "Uh..."
+  dan eyes_open_confused look_straight mouth_frown "Uh..."
 
   window hide
 
@@ -567,7 +567,7 @@ label gerald_story:
   gerald "When it stopped, {w}I felt extremely exhausted and fainted."
   gerald "But once I woke up, {w}I noticed that I had turned into the muscle beast you're looking at right now~."
 
-  dan eyes_surprised mouth_frown_open "Wait- {w}So you're telling me that the ring thing is real?!"
+  dan eyes_open look_s_straight mouth_frown_open "Wait- {w}So you're telling me that the ring thing is real?!"
 
   gerald "100\% real no cap, dude!"
   gerald "Even when I take off the ring, {w}my body's size still remains like this."
@@ -581,7 +581,7 @@ label gerald_story:
 
   menu:
     "Put the ring":
-      dan eyes_open mouth_frown_open "Hmm... Let me try it on then"
+      dan eyes_open look_straight mouth_frown_open "Hmm... Let me try it on then"
 
       gerald eyes_open mouth_frown_open "Oh, you want it?"
 
@@ -605,7 +605,7 @@ label gerald_story:
 
       gerald eyes_open_confused "Huh? {w}That's weird... {w}I immediately felt it as soon as I put it on."
 
-      dan "Maybe all the magic has been drained by your body, leaving it empty. {w}That's probably why I didn't feel anything."
+      dan look_left "Maybe all the magic has been drained by your body, leaving it empty. {w}That's probably why I didn't feel anything."
 
       gerald "That would make sense... {w}But that would be lame..."
       gerald eyes_close_confused mouth_frown "Sucks that I couldn't see you growing..."
@@ -620,11 +620,11 @@ label gerald_story:
       
       pass
     "Reject":
-      dan eyes_surprised mouth_wide "What! No!"
+      dan eyes_open look_s_straight mouth_wide "What! No!"
 
       gerald eyes_open_confused mouth_frown_open "Why?"
 
-      dan eyes_surprised_confused mouth_frown_open "You said it was a painful process, {w}and you know it's a no-no for me if the word 'pain' is included."
+      dan eyes_open_confused look_s_straight mouth_frown_open "You said it was a painful process, {w}and you know it's a no-no for me if the word 'pain' is included."
 
       gerald eyes_open_confused mouth_frown_open "Awh.. okay okay"
       gerald mouth_smile_open "I mean, fair.{w} Right now you have the big belly, {w}it just could make it even worse."
@@ -660,12 +660,13 @@ label gerald_story:
 
   gerald "You can rest in my bed, nerd, I can just sleep on the couch over there. {w}Don't you worry about me okay?"
 
-  dan "Bro... {w}Thank you for everything you've done for me."
+  dan look_straight "Bro... "
+  extend "Thank you for everything you've done for me."
 
   gerald eyes_close mouth_smile "Anything for bestie. ~"
   gerald eyes_open "Now sleep well bestie. ~"
 
-  dan "I will..."
+  dan eyes_happy "I will..."
 
   show screen simple_splash_screen("END OF CHAPTER II")
   stop music fadeout 1.0

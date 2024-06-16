@@ -31,6 +31,31 @@ init:
       attribute covered_buff:
         "characters/dan/base_12.png"
 
+    always:
+      "characters/dan/eyes_white.png"
+
+    group look:
+      attribute look_straight default:
+        "characters/dan/look_straight.png"
+      attribute look_left:
+        "characters/dan/look_left.png"
+      attribute look_right:
+        "characters/dan/look_right.png"
+      attribute look_up:
+        "characters/dan/look_up.png"
+      attribute look_down:
+        "characters/dan/look_down.png"
+      attribute look_s_straight:
+        "characters/dan/look_s_straight.png"
+      attribute look_s_left:
+        "characters/dan/look_s_left.png"
+      attribute look_s_right:
+        "characters/dan/look_s_right.png"
+      attribute look_s_up:
+        "characters/dan/look_s_up.png"
+      attribute look_s_down:
+        "characters/dan/look_s_down.png"
+
     group eyes:
       attribute eyes_close:
         "characters/dan/eyes_01.png"
@@ -44,12 +69,6 @@ init:
         "characters/dan/eyes_12.png"
       attribute eyes_open_angry:
         "characters/dan/eyes_13.png"
-      attribute eyes_surprised:
-        "characters/dan/eyes_21.png"
-      attribute eyes_surprised_confused:
-        "characters/dan/eyes_22.png"
-      attribute eyes_surprised_angry:
-        "characters/dan/eyes_23.png"
       attribute eyes_happy:
         "characters/dan/eyes_31.png"
       attribute eyes_happy_confused:
@@ -93,6 +112,31 @@ init:
       attribute covered_buff:
         "characters/dan/base_12.png"
 
+    always:
+      "characters/dan/eyes_white.png"
+
+    group look:
+      attribute look_straight default:
+        "characters/dan/look_straight.png"
+      attribute look_left:
+        "characters/dan/look_left.png"
+      attribute look_right:
+        "characters/dan/look_right.png"
+      attribute look_up:
+        "characters/dan/look_up.png"
+      attribute look_down:
+        "characters/dan/look_down.png"
+      attribute look_s_straight:
+        "characters/dan/look_s_straight.png"
+      attribute look_s_left:
+        "characters/dan/look_s_left.png"
+      attribute look_s_right:
+        "characters/dan/look_s_right.png"
+      attribute look_s_up:
+        "characters/dan/look_s_up.png"
+      attribute look_s_down:
+        "characters/dan/look_s_down.png"
+
     group eyes:
       attribute eyes_close:
         "characters/dan/eyes_01.png"
@@ -106,12 +150,6 @@ init:
         "characters/dan/eyes_12.png"
       attribute eyes_open_angry:
         "characters/dan/eyes_13.png"
-      attribute eyes_surprised:
-        "characters/dan/eyes_21.png"
-      attribute eyes_surprised_confused:
-        "characters/dan/eyes_22.png"
-      attribute eyes_surprised_angry:
-        "characters/dan/eyes_23.png"
       attribute eyes_happy:
         "characters/dan/eyes_31.png"
       attribute eyes_happy_confused:

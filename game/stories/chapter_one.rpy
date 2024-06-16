@@ -122,7 +122,7 @@ label chapter_one:
     dan mouth_smile_open "Finally arrived."
     dan "Time to order and work!~"
 
-    dan eyes_open_confused "{i}What coffee should I order today?{/i}"
+    dan eyes_open_confused look_up "{i}What coffee should I order today?{/i}"
 
     menu:
         "Cappuccino":
@@ -132,7 +132,7 @@ label chapter_one:
         "Espresso":
             $ coffee_selection = "Espresso"
 
-    dan eyes_open "Let's order [coffee_selection] this time.~"
+    dan eyes_open look_straight "Let's order [coffee_selection] this time.~"
 
     hide Dan
     with easeoutright
@@ -192,11 +192,11 @@ label answer_call:
     hide Phone
     with dissolve
 
-    dan eyes_surprised mouth_wide "HEY WAIT-"
+    dan eyes_open look_s_straight mouth_wide "HEY WAIT-"
     dan "..."
-    dan eyes_open_confused mouth_frown_open "He hung up..."
+    dan eyes_open_confused look_straight mouth_frown_open "He hung up..."
     dan "Bruh... {w}Can I at least have ONE normal day?"
-    dan mouth_frown "But... {w}why does it sound so familiar?"
+    dan look_left mouth_frown "But... {w}why does it sound so familiar?"
     dan eyes_close_confused "I guess I'm just gonna continue the project. {w}I can't let anything distract me right now."
     window hide
     pause 1.0
@@ -245,7 +245,7 @@ label gerald_coming:
     play music cinematic_suspense volume 0.5
     
     show Gerald at move_pos(0.3, 0.5)
-    show Dan covered eyes_surprised:
+    show Dan covered mouth_frown eyes_open look_s_straight:
         xpos 0.7
         xzoom -1.0
         pause 0.5
@@ -264,12 +264,11 @@ label gerald_coming:
     dan mouth_frown "Dude... "
     show Dan mouth_frown_open at move_pos(0.6, 0.2)
     extend "WHAT AN ABSOLUTE UNIT YOU ARE! {w}Did you take steroids or something? {w}We haven't met for 4 months and there is no way you can get THIS big within such a small period of time."
-    show Dan eyes_surprised_confused mouth_frown at move_pos(0.7, 0.2)
+    show Dan eyes_open_confused mouth_frown at move_pos(0.7, 0.2)
     gerald mouth_smile_open "Hehehe... {w}Thanks for the compliment nerd. "
     show Gerald eyes_open
     extend "But no. {w}I didn't take any steroids. {w}I have my own ways.~"
-    show Dan eyes_surprised mouth_smile_open
-    dan  "OH REALLY?! {w}What is it? I wanna know!"
+    dan eyes_open mouth_smile_open "OH REALLY?! {w}What is it? I wanna know!"
     gerald eyes_close mouth_smile_open "It's secret.~"
     dan eyes_open_confused mouth_frown_open "Aw... shucks..."
     gerald eyes_happy mouth_smile "Hehehe...~"
@@ -277,7 +276,7 @@ label gerald_coming:
     show Dan eyes_happy
     dan "Gosh I'm so happy to see you again bud! {w}These 4 months felt like years.~"
     gerald mouth_smile_open "Likewise [persistent.char_name]"
-    dan eyes_open_confused "Hey but... {w}why did you come back? {w}Got a job or something?"
+    dan eyes_open_confused look_straight "Hey but... {w}why did you come back? {w}Got a job or something?"
     show Dan mouth_smile
     gerald eyes_open_confused "Well actually... {w}I just missed this city, and you too, buddy. "
     show Gerald eyes_happy
@@ -297,7 +296,7 @@ label gerald_coming:
     gerald eyes_happy mouth_smile_open "Hehehe... {w}Very well {bt=3}nerdy boi.~{/bt}"
 
     show Dan:
-        xpos 0.75
+        xpos 0.7
         unflip
     
     pause 0.5
